@@ -15,11 +15,11 @@ h1,h2,h3,h4,h5,h6,a.btn-main,.wm,.de-image-text.s2 h3,.list-inline-style-1 li,.l
     font-weight: bold;
 }
 
-h2{
-    font-size: 45px;
+h3{
+    font-size: 35px;
 }
 
-h2,.wm{
+h3,.wm{
     text-transform: uppercase;
 }
 
