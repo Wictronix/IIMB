@@ -16121,8 +16121,10 @@ img {
 }
 
 .event-card {
-    height: 400px; /* Set a fixed height for consistency */
-    overflow: hidden; /* Hide overflowing content */
+    height: 500px; 
+    overflow: hidden; 
+    box-shadow: inset;
+    border-radius: 20px;
 }
 .event-card:hover {
     transform: scale(1.05);
