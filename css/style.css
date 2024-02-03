@@ -8733,9 +8733,9 @@ a.de-card:hover {
     color: #ffffff;
     position: absolute;
     z-index: 1;
-    width: 100%;
+    width: 450px;
     height: 100%;
-    padding: 40px;
+    /* padding: 40px; */
     /*background: linear-gradient(0deg, rgba(30,30,30,0) 30%, rgba(30,30,30,1) 100%); */
 }
 .de-image-text .d-text h3{
@@ -16112,4 +16112,24 @@ img {
         left: 0;
         top: -21px;
     }
+}
+
+.sponsor-logo{
+    height: 120px;
+    width: 180px;
+}
+
+.event-card {
+    height: 400px; /* Set a fixed height for consistency */
+    overflow: hidden; /* Hide overflowing content */
+}
+.event-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.event-card img {
+    object-fit: cover; /* Ensure images cover the entire container */
+    height: 100%; /* Make images fill the entire height of the container */
+    width: 100%; /* Make images fill the entire width of the container */
 }
