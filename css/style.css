@@ -10081,7 +10081,7 @@ body::-webkit-scrollbar-thumb {
 
 .de-flex {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .de-flex>.de-flex-col {
