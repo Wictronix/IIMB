@@ -8745,6 +8745,7 @@ a.de-card:hover {
 .de-image-text.s2 .d-text{
     height: auto;
     bottom: 0;
+    left: -1rem;
     padding: 0;
 }
 
