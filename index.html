@@ -93,6 +93,11 @@
             </div>
         </header>
         <!-- header close -->
+        <svg id="motionSimulation" viewBox="0 0 200 100" preserveAspectRatio="none">
+            <circle id="getMe" r="0" fill="none">
+                <animateMotion dur="10s" repeatCount="indefinite" path="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
+            </circle>
+        </svg>
         <!-- content begin -->
         <div class="no-bottom no-top" id="content">
             <div id="top"></div>
@@ -459,44 +464,19 @@
                             </address>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-xs-1">
+                    <div class="col-md-2 col-sm-6 col-xs-1">
                         <div class="widget">
                             <h5>Quick Links</h5>
                             <ul>
-                                <li><a href="02_djfest-blog.html">Blog</a></li>
-                                <li><a href="02_djfest-gallery.html">Gallery</a></li>
-                                <li><a href="contact.html">Contact Us</a></li>
-                                <li><a href="#section-tickets">Ticket</a></li>
+                                <li><a href="./sponsors.html">Sponsors</a></li>
+                                <li><a href="./competition.html">Competitions</a></li>
+                                <li><a href="./schedule.html">Schedule</a></li>
+                                <li><a href="./contact.html">Contact Us</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-xs-1">
-                        <div class="widget">
-                            <h5>Latest Blog</h5>
-                            <ul>
-                                <li><a href="02_djfest-blog-single.html">Unreleased Footage of DJ Phenomenic</a></li>
-                                <li><a href="02_djfest-blog-single.html">DJ Fritz Announce New Single</a></li>
-                                <li><a href="02_djfest-blog-single.html">DJ Neurogenic Announce World Tour</a></li>
-                                <li><a href="02_djfest-blog-single.html">Taxidermize New Collaboration</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-1">
-                        <div class="widget">
-                            <h5>Newsletter</h5>
-                            <p>Signup for our newsletter to get the latest news in your inbox.</p>
-                            <form action="https://madebydesignesia.com/themes/rockfest/blank.php" class="row form-dark"
-                                id="form_subscribe" method="post" name="form_subscribe">
-                                <div class="col text-center">
-                                    <input class="form-control" id="txt_subscribe" name="txt_subscribe"
-                                        placeholder="enter your email" type="text" /> <a href="#" id="btn-subscribe"><i
-                                            class="arrow_right bg-color-secondary"></i></a>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </form>
-                            <div class="spacer-10"></div>
-                            <small>Your email is safe with us. We don't spam.</small>
-                        </div>
+                    <div class="col-md-7 col-sm-6 col-xs-1">
+                        <iframe src="https://unstop.com/" width="800" height="300"></iframe>
                     </div>
                 </div>
             </div>
@@ -540,6 +520,7 @@
     <script src="js/jquery.countdown.js"></script>
     <script src="js/countdown-custom.js"></script>
     <script src="js/designesia.js"></script>
+    <script src="./js/particle.js"></script>
     <script>
         $(document).ready(function () {
             $('.counter').each(function () {
