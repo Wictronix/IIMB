@@ -5,16 +5,16 @@ function spark(e, opt_properties) {
 	if (!e) {
 		event = window.event;
 	}
-	// if (event && (event.pageX || event.pageY)) {
-	// 	mouseX = event.pageX;
-	// 	mouseY = event.pageY;
-	// }
-	// else if (event && (event.clientX || event.clientY))    {
-	// 	mouseX = event.clientX + document.body.scrollLeft
-	// 		+ document.documentElement.scrollLeft;
-	// 	mouseY = event.clientY + document.body.scrollTop
-	// 		+ document.documentElement.scrollTop;
-	// }
+	if (event && (event.pageX || event.pageY)) {
+		mouseX = event.pageX;
+		mouseY = event.pageY;
+	}
+	else if (event && (event.clientX || event.clientY))    {
+		mouseX = event.clientX + document.body.scrollLeft
+			+ document.documentElement.scrollLeft;
+		mouseY = event.clientY + document.body.scrollTop
+			+ document.documentElement.scrollTop;
+	}
 	const defaultProperties = {color: `random`, mouseX: mouseX, mouseY: mouseY, hw: 30, sparks: 8, sw: 8, time: 400};
 	const randInt = (min, max) => {return Math.floor(Math.random() * (max - min + 1)) + min;}
   const c = Object.assign(defaultProperties, opt_properties);
@@ -29,8 +29,8 @@ function spark(e, opt_properties) {
 	setTimeout(() => {svg?.remove();}, c.time);
 }
 document.addEventListener("click", (event) => {spark(event, {color: 'random', hw: 60}); clearInterval(sparkInterval);});
-// document.addEventListener("mousemove", (event) => {spark(event, {color: 'random'}); clearInterval(sparkInterval);});
-// document.addEventListener("touchmove", (event) => {spark(event, {color: 'random'}); clearInterval(sparkInterval);});
+document.addEventListener("mousemove", (event) => {spark(event, {color: 'random'}); clearInterval(sparkInterval);});
+document.addEventListener("touchmove", (event) => {spark(event, {color: 'random'}); clearInterval(sparkInterval);});
 
 function infiniteSparkle() {
 	sparkInterval = setInterval(()=> {

@@ -16121,7 +16121,6 @@ img {
 }
 
 .event-card {
-    height: 500px; 
     overflow: hidden; 
     box-shadow: inset;
     border-radius: 20px;
