@@ -26,6 +26,36 @@
     <!-- color scheme -->
     <link id="colors" href="css/colors/scheme-02.css" rel="stylesheet" type="text/css" />
     <link href="css/coloring.css" rel="stylesheet" type="text/css" />
+    <style>
+        /* Custom styles for sliding modal from the right */
+        .modal.right .modal-dialog {
+            position: fixed;
+            margin: auto;
+            width: 300px;
+            height: 100%;
+            right: 0;
+            top: 0;
+            transition: transform 0.3s ease-out;
+        }
+
+        .modal.right.fade.show .modal-dialog {
+            transform: translateX(0);
+        }
+
+        .modal-content {
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        .modal-backdrop {
+            width: 100%;
+            height: 100%;
+        }
+
+        .modal-header .btn-close {
+            filter: invert(1) grayscale(100%) brightness(200%);
+        }
+    </style>
 </head>
 
 <body class="dark-scheme">
@@ -58,32 +88,30 @@
                                 <!-- mainmenu begin -->
                                 <ul id="mainmenu">
                                     <li><a href="./index.html">Home</a></li>
-                                    <li><a href="./sponsors.html">Sponsors</a></li>
-                                    <li><a href="#">Pro-Nites</a>
+                                    <li><a href="#">Sponsors</a></li>
+                                    <li><a href="#">Events</a>
                                         <ul>
-                                            <li><a href="">Rockfest</a></li>
-                                            <li><a href="">DJFest</a></li>
-                                            <li><a href="./icons-font-awesome.html">Electrofest</a></li>
+                                            <li><a href="./icons-font-awesome.html">Pro-Nites</a></li>
+                                            <li><a href="./competition.html">Competitions</a></li>
+                                            <li><a href="./speaker.html">Speakers</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="./competition.html">Competitions</a></li>
-                                    <li><a href="./speaker.html">Speakers</a></li>
+                                    <li><a href="">Accomodation</a></li>
+                                    <li><a href="./merchandise.html">Merchandise</a></li>
                                     <li><a href="./schedule.html">Schedule</a></li>
                                     <li><a href="">Reach Us</a>
                                         <ul>
-                                            <li><a href="">Accomodation</a></li>
-                                            <li><a href="./merchandise.html">Merchandise</a></li>
                                             <li><a href="./our-team.html">Our Team</a></li>
                                             <li><a href="">Virtual Expedition</a></li>
                                             <li><a href="contact.html">Contact Us</a></li>
                                         </ul>
                                     </li>
-
                                 </ul>
                             </div>
                             <div class="de-flex-col">
                                 <div class="menu_side_area">
-                                    <a href="contact.html" class="btn-main"><i class="fa fa-sign-in"></i><span>Contact Us</span></a>
+                                    <a href="contact.html" class="btn-main"><i class="fa fa-sign-in"></i><span>Contact
+                                            Us</span></a>
                                     <span id="menu-btn"></span>
                                 </div>
                             </div>
@@ -95,7 +123,8 @@
         <!-- header close -->
         <svg id="motionSimulation" viewBox="0 0 200 100" preserveAspectRatio="none">
             <circle id="getMe" r="0" fill="none">
-                <animateMotion dur="10s" repeatCount="indefinite" path="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
+                <animateMotion dur="10s" repeatCount="indefinite"
+                    path="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
             </circle>
         </svg>
         <!-- content begin -->
@@ -189,7 +218,7 @@
                 </div>
             </section> -->
 
-             <section id="section-date" class="bg-color pt40 pb30">
+            <section id="section-date" class="bg-color pt40 pb30">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-10 offset-md-1">
@@ -207,7 +236,7 @@
                         <div class="col-lg-12">
                             <div class="text-center">
                                 <div class="wm wow slideInUp">About</div>
-                                <h2 class="wow fadeInUp" data-wow-delay=".2s"><span class="id-color">About Us</span> 
+                                <h2 class="wow fadeInUp" data-wow-delay=".2s"><span class="id-color">About Us</span>
                                 </h2>
                                 <div class="small-border bg-color-2"></div>
                                 <div class="spacer-single"></div>
@@ -222,11 +251,20 @@
                             <div class="col-md-7 mb-sm-30">
                                 <div class="wow fadeInRight">
                                     <h1>Welcome To Unmaad 2024</h1>
-                                    <p>IIM Bangalore's annual cultural festival, "Unmaad 2024", is renowned as one of the country's biggest business school cultural festivals. The event is scheduled to take place offline for the first time in two years from February 23rd to February 25th, 2024, providing 3 days of uninterrupted entertainment.
+                                    <p>IIM Bangalore's annual cultural festival, "Unmaad 2024", is renowned as one of
+                                        the country's biggest business school cultural festivals. The event is scheduled
+                                        to take place offline for the first time in two years from February 23rd to
+                                        February 25th, 2024, providing 3 days of uninterrupted entertainment.
                                         <br>
-                                        Unmaad draws attendees from all across India and provides a platform to display your abilities in competitions that include, among other things, street dramas, musical and dance performances, quizzes, debates, and the grand Unmaad fashion show!
+                                        Unmaad draws attendees from all across India and provides a platform to display
+                                        your abilities in competitions that include, among other things, street dramas,
+                                        musical and dance performances, quizzes, debates, and the grand Unmaad fashion
+                                        show!
                                         <br>
-                                        The event has hosted artists like Mohit Chauhan, The Yellow Diary, Shankar Ehsaan Loy, KK, Kailash Kher, Lucky Ali, Strings, Jethro Tull, the Indian Ocean, The Local Train, Agam, Benny Dayal, Salim-Sulaiman and Prateek Kuhad.</p>
+                                        The event has hosted artists like Mohit Chauhan, The Yellow Diary, Shankar
+                                        Ehsaan Loy, KK, Kailash Kher, Lucky Ali, Strings, Jethro Tull, the Indian Ocean,
+                                        The Local Train, Agam, Benny Dayal, Salim-Sulaiman and Prateek Kuhad.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -234,13 +272,66 @@
                 </div>
             </section>
 
+            <!-- Bootstrap Modal for Merch Advertisement -->
+            <div class="modal fade" id="scrollModal" tabindex="-1" aria-labelledby="scrollModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="scrollModalLabel">Get Your Favorite Merch!</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <!-- Example Item 1 -->
+                                <div class="col-md-6">
+                                    <img src="https://thesagacity.s3.ap-south-1.amazonaws.com/media/TOji_new_2_jvv5G8t.webp"
+                                        alt="Merch Item 1" class="img-fluid mb-2">
+                                    <h6>350 GSM Heavy Cotton Fleece</h6>
+                                    <p>Character Name - Anime Oversized Hood…</p>
+                                    <p>Rs 1800</p>
+                                </div>
+                                <!-- Example Item 2 -->
+                                <div class="col-md-6">
+                                    <img src="https://thesagacity.s3.ap-south-1.amazonaws.com/media/TOji_new_2_jvv5G8t.webp"
+                                        alt="Merch Item 2" class="img-fluid mb-2">
+                                    <h6>350 GSM Heavy Cotton Fleece</h6>
+                                    <p>Character Name - Anime Oversized Hood…</p>
+                                    <p>Rs 1800</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <img src="https://thesagacity.s3.ap-south-1.amazonaws.com/media/TOji_new_2_jvv5G8t.webp"
+                                        alt="Merch Item 2" class="img-fluid mb-2">
+                                    <h6>350 GSM Heavy Cotton Fleece</h6>
+                                    <p>Character Name - Anime Oversized Hood…</p>
+                                    <p>Rs 1800</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <img src="https://thesagacity.s3.ap-south-1.amazonaws.com/media/TOji_new_2_jvv5G8t.webp"
+                                        alt="Merch Item 2" class="img-fluid mb-2">
+                                    <h6>350 GSM Heavy Cotton Fleece</h6>
+                                    <p>Character Name - Anime Oversized Hood…</p>
+                                    <p>Rs 1800</p>
+                                </div>
+                                <!-- Add more items as needed -->
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" id="buyNowBtn">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
 
             <section id="section-date" class="bg-color pt40 pb30">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 text-center">
                             <div class="wm wow slideInUp">Sponsors</div>
-                            <h2 class="wow fadeInUp" data-wow-delay=".2s"><span class="id-color">Sponsors</span> 
+                            <h2 class="wow fadeInUp" data-wow-delay=".2s"><span class="id-color">Sponsors</span>
                             </h2>
                             <div class="small-border bg-color wow zoomIn" data-wow-delay=".4s"></div>
                         </div>
@@ -286,7 +377,8 @@
                         <div class="col-lg-12">
                             <div class="text-center">
                                 <div class="wm wow slideInUp">Stats</div>
-                                <h2 class="wow fadeInUp" data-wow-delay=".2s"><span class="id-color">Unmaad statistics</span> 
+                                <h2 class="wow fadeInUp" data-wow-delay=".2s"><span class="id-color">Unmaad
+                                        statistics</span>
                                 </h2>
                                 <div class="small-border bg-color-2"></div>
                                 <div class="spacer-single"></div>
@@ -338,7 +430,11 @@
                                 <!-- Slides -->
                                 <div class="carousel-inner mb-5">
                                     <div class="carousel-item active">
-                                        <iframe width="1000" height="667" src="https://www.youtube.com/embed/stnYgjcHPkI?si=ZnaWCVJVpJHt8Bse" title="YouTube video player" frameborder="0" allow="accelerometer;clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                                    
+                                        <iframe width="1000" height="667"
+                                            src="https://www.youtube.com/embed/stnYgjcHPkI?si=ZnaWCVJVpJHt8Bse"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer;clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
                                     </div>
                                     <div class="carousel-item">
                                         <img src="images-dj/gallery/2.jpg" class="d-block w-100" alt="" />
@@ -410,7 +506,7 @@
                     <div class="row">
                         <div class="col-md-12 text-center">
                             <div class="wm wow slideInUp">Sponsors</div>
-                            <h2 class="wow fadeInUp" data-wow-delay=".2s"><span class="id-color">Sponsors</span> 
+                            <h2 class="wow fadeInUp" data-wow-delay=".2s"><span class="id-color">Sponsors</span>
                             </h2>
                             <div class="small-border bg-color wow zoomIn" data-wow-delay=".4s"></div>
                         </div>
@@ -458,7 +554,9 @@
                                     <div class="social-icons">
                                         <a href="#"><i class="fa fa-envelope-o fa-lg"></i></a>
                                         <a href="#"><i class="fa fa-youtube fa-lg"></i></a>
-                                        <a href="https://www.instagram.com/unmaad_iimb?igsh=MXV6eHp6OGZoeTFneg%3D%3D&utm_source=qr"><i class="fa fa-linkedin fa-lg"></i></a>
+                                        <a
+                                            href="https://www.instagram.com/unmaad_iimb?igsh=MXV6eHp6OGZoeTFneg%3D%3D&utm_source=qr"><i
+                                                class="fa fa-linkedin fa-lg"></i></a>
                                     </div>
                                 </div>
                             </address>
@@ -487,11 +585,12 @@
                             <div class="de-flex">
                                 <div class="de-flex-col">
                                     <a href="index.html">
-                                        
-                                        <span class="copy">&copy; Copyright 2024 - Powered By <img alt="WictroniX" class="f-logo" src="./images-dj/white.png" /></span>
+
+                                        <span class="copy">&copy; Copyright 2024 - Powered By <img alt="WictroniX"
+                                                class="f-logo" src="./images-dj/white.png" /></span>
                                     </a>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -533,6 +632,25 @@
                 });
             });
         });
+
+        document.addEventListener("scroll", function () {
+            var scrollPosition = window.scrollY || document.documentElement.scrollTop;
+            var scrollTrigger = 1500; // px, adjust accordingly
+
+            if (scrollPosition > scrollTrigger) {
+                var myModal = new bootstrap.Modal(document.getElementById('scrollModal'), {
+                    keyboard: false
+                });
+                myModal.show();
+                document.removeEventListener("scroll", arguments.callee);
+            }
+        });
+
+        document.getElementById('buyNowBtn').addEventListener('click', function () {
+            window.location.href = 'merchandise.html';
+        });
+
+
 
     </script>
 </body>
