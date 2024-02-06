@@ -238,6 +238,15 @@ header div#logo {
 }
 header #logo img {
     margin-top: -10px;
+    height: 3rem;
+    margin-right: 10px;
+}
+header #logo h4 {
+    font-family: 'Lemonada', cursive;
+}
+#defaultCountdown {
+    filter: drop-shadow(5px 5px 6px black);
+    backdrop-filter: blur(8px);
 }
 
 header .logo-2 {
