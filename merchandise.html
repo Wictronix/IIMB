@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="zxx">
-
-
-<!-- Mirrored from madebydesignesia.com/themes/rockfest/02_djfest-blog.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Jan 2024 19:45:28 GMT -->
+<html lang="en">
 
 <head>
     <title>Rockfest - Music Festival Event, DJ Concert and Night Club Website Template</title>
-    <link rel="icon" href="images-dj/icon.png" type="image/gif" sizes="16x16">
-    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <link rel="icon" href="./favicon.ico" type="image/gif" sizes="16x16">
+    <meta content="text/html" charset="utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="Rockfest - Music Festival Event, DJ Concert and Night Club Website Template" name="description" />
-    <meta content="" name="keywords" />
-    <meta content="" name="author" />
+    <meta content="Unmaad - IIMB" name="description" />
+    <meta content="Unmaad, IIMB, Cultural fest" name="keywords" />
+    <meta content="WictroniX" name="author" />
     <!-- CSS Files
     ================================================== -->
     <link id="bootstrap" href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link id="bootstrap-grid" href="css/bootstrap-grid.min.css" rel="stylesheet" type="text/css" />
     <link id="bootstrap-reboot" href="css/bootstrap-reboot.min.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@500&display=swap" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet" type="text/css" />
     <link href="css/owl.carousel.css" rel="stylesheet" type="text/css" />
     <link href="css/owl.theme.css" rel="stylesheet" type="text/css" />
@@ -29,78 +29,67 @@
     <!-- color scheme -->
     <link id="colors" href="css/colors/scheme-02.css" rel="stylesheet" type="text/css" />
     <link href="css/coloring.css" rel="stylesheet" type="text/css" />
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Makes all modal close buttons white */
-        .modal-header .close span {
-            color: white;
+        /* Custom styles for sliding modal from the right */
+        .modal.right .modal-dialog {
+            position: fixed;
+            margin: auto;
+            width: 300px;
+            height: 100%;
+            right: 0;
+            top: 0;
+            transition: transform 0.3s ease-out;
+        }
+
+        .modal.right.fade.show .modal-dialog {
+            transform: translateX(0);
+        }
+
+        .modal-content {
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        .modal-backdrop {
+            width: 100%;
+            height: 100%;
+        }
+
+        .modal-header .btn-close {
+            filter: invert(1) grayscale(100%) brightness(200%);
         }
     </style>
 </head>
-<!-- <style>
-        section.card {
-            position: relative;
-            width: 335px;
-            height: 240px;
-            background-color: #474dc3;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            perspective: 1000px;
-            transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
+<style>
+    /* Custom styles for sliding modal from the right */
+    .modal.right .modal-dialog {
+        position: fixed;
+        margin: auto;
+        width: 300px;
+        height: 100%;
+        right: 0;
+        top: 0;
+        transition: transform 0.3s ease-out;
+    }
 
-        .card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px #000000;
-            background-color: #474dc3;
-            color: #ffffff;
-        }
+    .modal.right.fade.show .modal-dialog {
+        transform: translateX(0);
+    }
 
-        .card__content {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            padding: 20px;
-            box-sizing: border-box;
-            background-color: #474dc3;
-            transform: rotateX(-90deg);
-            transform-origin: bottom;
-            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
+    .modal-content {
+        height: 100%;
+        overflow-y: auto;
+    }
 
-        .card:hover .card__content {
-            transform: rotateX(0deg);
-        }
+    .modal-backdrop {
+        width: 100%;
+        height: 100%;
+    }
 
-        .card__title {
-            margin: 0;
-            padding-left: 5px;
-            font-size: 24px;
-            color: var(--white);
-            font-weight: 700;
-        }
-
-        .card:hover svg {
-            scale: 0;
-        }
-
-        .card__description {
-            margin: 10px 0 0;
-            font-size: 14px;
-            color: #ffffff;
-            line-height: 1.4;
-        }
-
-        .card__image {
-            height: 15em;
-            object-fit: fill;
-        }
-    </style> -->
+    .modal-header .btn-close {
+        filter: invert(1) grayscale(100%) brightness(200%);
+    }
+</style>
 </head>
 
 <body class="dark-scheme">
@@ -121,7 +110,8 @@
                                         <a href="index.html">
                                             <img alt="" src="images-dj/logo-light.png" />
                                         </a>
-                                        <h4>UNMAAD</h4>
+                                        <h4>UNMAAD '24
+                                        </h4>
                                     </div>
                                     <!-- logo close -->
                                 </div>
@@ -132,7 +122,7 @@
                                 <!-- mainmenu begin -->
                                 <ul id="mainmenu">
                                     <li><a href="./index.html">Home</a></li>
-                                    <li><a href="#">Sponsors</a></li>
+                                    <li><a href="./sponsors.html">Sponsors</a></li>
                                     <li><a href="#">Events</a>
                                         <ul>
                                             <li><a href="pro-nights.html">Pro-Nites</a></li>
@@ -154,7 +144,7 @@
                             </div>
                             <div class="de-flex-col">
                                 <div class="menu_side_area">
-                                    <a href="contact.html" class="btn-main"><i class="fa fa-sign-in"></i><span>Join
+                                    <a href="contact.html" class="btn-main"><i class="fa fa-sign-in"></i><span>Contact
                                             Us</span></a>
                                     <span id="menu-btn"></span>
                                 </div>
@@ -188,34 +178,17 @@
 
             <!-- section begin -->
             <section aria-label="section">
-                <div class="container row mx-auto">
-                    <!-- <section id="card1" class="card">
-                        <img class="card__image" src="./images-dj/blog/5.jpg" alt="merch">
-                        <div class="card__content">
-                            <p class="card__title">Lorem Ipsum</p>
-                            <p class="card__description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae
-                                justo vel lorem tincidunt ultrices at non nunc. Donec in sapien viverra,
-                                tincidunt augue id, efficitur massa.
-                            </p>
-                            <br>
-                            <button class="btn btn-icon-only btn-tertiary px-1 bg-black text-white" type="button"
-                                aria-label="add to cart button" title="add to cart button">
-                                <span aria-hidden="true" class="fa fa-cart-plus"> Buy Now</span>
-                            </button>
-                        </div>
-                    </section> -->
+                <div class="container row m-auto">
 
-
-                    <div style="padding-left: 0.3rem; padding-right: 0.3rem;"
-                        class="col-6 col-sm-6 col-md-4 col-lg-3 infinite-item">
+                    <div style="margin-top: 10px; padding-left: 0.3rem; padding-right: 0.3rem; border-radius: 1vh;"
+                        class="col-sm-12 col-md-6 col-lg-4 infinite-item">
                         <!-- Card -->
                         <div class="card">
                             <!-- Image -->
                             <div class="card-img">
                                 <!-- Image -->
                                 <a class="card-img-hover"
-                                    href="/product/sorcerer-killler-anime-hoodie-1899-350-gsm-heavy-c/">
+                                    href="#">
                                     <img class="card-img-top card-img-back"
                                         src="https://thesagacity.s3.ap-south-1.amazonaws.com/media/TOji_new_2_jvv5G8t.webp"
                                         alt="...">
@@ -223,17 +196,17 @@
                                 <!-- Actions -->
                             </div>
                             <!-- Body -->
-                            <div class="card-body px-0">
+                            <div class="card-body">
                                 <!-- Category -->
                                 <div class="font-size-xs">
                                     <a class="text-muted"
-                                        href="/product/sorcerer-killler-anime-hoodie-1899-350-gsm-heavy-c/">350 GSM
+                                        href="#">350 GSM
                                         Heavy Cotton Fleece</a>
                                 </div>
                                 <!-- Title -->
                                 <div class="font-weight-bold">
                                     <a class="text-body"
-                                        href="/product/sorcerer-killler-anime-hoodie-1899-350-gsm-heavy-c/">
+                                        href="#">
                                         Character Name - Anime Oversized Hood…
                                     </a>
                                 </div>
@@ -244,48 +217,22 @@
                                         aria-label="add to cart button" title="add to cart button">
                                         <span aria-hidden="true" class="fa fa-cart-plus"> Buy Now</span>
                                     </button> -->
-                                    <button type="button" class="btn btn-primary" data-toggle="modal"
-                                        data-target="#buyNowModal">
-                                        <span aria-hidden="true" class="fa fa-cart-plus"> Buy Now</span>
-                                    </button>
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#buyNowModal">
+                                            <span aria-hidden="true" class="fa fa-cart-plus"> Buy Now</span>
+                                        </button>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Buy Now pop-up -->
-                    <div class="modal fade" id="buyNowModal" tabindex="-1" role="dialog"
-                        aria-labelledby="buyNowModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="buyNowModalLabel">Buy Now</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true" style="color: white;">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <!-- QR Code for direct purchase link -->
-                                    <div class="text-center mb-4">
-                                        <img src="images-dj/misc/featured-2.jpg" alt="Scan to Buy"
-                                            style="max-width: 200px;">
-                                        <p class="mt-2">Scan this QR code with your phone to buy now!</p>
-                                    </div>
-                                    <!-- Additional Buy Now Box Content Goes Here -->
-                                    <p>Put your additional Buy Now box content here.</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Purchase</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
 
 
 
-                    <div style="padding-left: 0.3rem; padding-right: 0.3rem;"
-                        class="col-6 col-sm-6 col-md-4 col-lg-3 infinite-item">
+                    <div style="margin-top: 10px; padding-left: 0.3rem; padding-right: 0.3rem; border-radius: 1vh;"
+                    class="col-sm-12 col-md-6 col-lg-4 infinite-item">
                         <!-- Card -->
                         <div class="card">
                             <!-- Image -->
@@ -300,7 +247,7 @@
                                 <!-- Actions -->
                             </div>
                             <!-- Body -->
-                            <div class="card-body px-0">
+                            <div class="card-body ">
                                 <!-- Category -->
                                 <div class="font-size-xs">
                                     <a class="text-muted"
@@ -326,8 +273,10 @@
                         </div>
 
                     </div>
-                    <div style="padding-left: 0.3rem; padding-right: 0.3rem;"
-                        class="col-6 col-sm-6 col-md-4 col-lg-3 infinite-item">
+
+                    
+                    <div style="margin-top: 10px; padding-left: 0.3rem; padding-right: 0.3rem; border-radius: 1vh;"
+                    class="col-sm-12 col-md-6 col-lg-4 infinite-item">
                         <!-- Card -->
                         <div class="card">
                             <!-- Image -->
@@ -342,7 +291,7 @@
                                 <!-- Actions -->
                             </div>
                             <!-- Body -->
-                            <div class="card-body px-0">
+                            <div class="card-body ">
                                 <!-- Category -->
                                 <div class="font-size-xs">
                                     <a class="text-muted"
@@ -368,8 +317,8 @@
                         </div>
 
                     </div>
-                    <div style="padding-left: 0.3rem; padding-right: 0.3rem;"
-                        class="col-6 col-sm-6 col-md-4 col-lg-3 infinite-item">
+                    <div style="margin-top: 10px; padding-left: 0.3rem; padding-right: 0.3rem; border-radius: 1vh;"
+                        class="col-sm-12 col-md-6 col-lg-4 infinite-item">
                         <!-- Card -->
                         <div class="card">
                             <!-- Image -->
@@ -384,7 +333,7 @@
                                 <!-- Actions -->
                             </div>
                             <!-- Body -->
-                            <div class="card-body px-0">
+                            <div class="card-body ">
                                 <!-- Category -->
                                 <div class="font-size-xs">
                                     <a class="text-muted"
@@ -410,8 +359,8 @@
                         </div>
 
                     </div>
-                    <div style="padding-left: 0.3rem; padding-right: 0.3rem;"
-                        class="col-6 col-sm-6 col-md-4 col-lg-3 infinite-item">
+                    <div style="margin-top: 10px; padding-left: 0.3rem; padding-right: 0.3rem; border-radius: 1vh;"
+                        class="col-sm-12 col-md-6 col-lg-4 infinite-item">
                         <!-- Card -->
                         <div class="card">
                             <!-- Image -->
@@ -426,7 +375,7 @@
                                 <!-- Actions -->
                             </div>
                             <!-- Body -->
-                            <div class="card-body px-0">
+                            <div class="card-body ">
                                 <!-- Category -->
                                 <div class="font-size-xs">
                                     <a class="text-muted"
@@ -452,8 +401,8 @@
                         </div>
 
                     </div>
-                    <div style="padding-left: 0.3rem; padding-right: 0.3rem;"
-                        class="col-6 col-sm-6 col-md-4 col-lg-3 infinite-item">
+                    <div style="margin-top: 10px; padding-left: 0.3rem; padding-right: 0.3rem; border-radius: 1vh;"
+                        class="col-sm-12 col-md-6 col-lg-4 infinite-item">
                         <!-- Card -->
                         <div class="card">
                             <!-- Image -->
@@ -468,7 +417,7 @@
                                 <!-- Actions -->
                             </div>
                             <!-- Body -->
-                            <div class="card-body px-0">
+                            <div class="card-body ">
                                 <!-- Category -->
                                 <div class="font-size-xs">
                                     <a class="text-muted"
@@ -594,7 +543,6 @@
     <script src="js/jquery.isotope.min.js"></script>
     <script src="js/easing.js"></script>
     <script src="js/owl.carousel.js"></script>
-    <script src="js/OwlCarousel2Thumbs.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/enquire.min.js"></script>
     <script src="js/jquery.plugin.js"></script>
@@ -602,13 +550,44 @@
     <script src="js/jquery.countdown.js"></script>
     <script src="js/jquery.lazy.min.js"></script>
     <script src="js/jquery.lazy.plugins.min.js"></script>
-    <script src="js/jquery.smartsticky.min.js"></script>
+    <script src="js/mdb.min.js"></script>
+    <script src="js/jquery.countdown.js"></script>
+    <script src="js/countdown-custom.js"></script>
     <script src="js/designesia.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- <script src="./js/particle.js"></script> -->
+    <script>
+        $(document).ready(function () {
+            $('.counter').each(function () {
+                var $this = $(this);
+                $this.countTo({
+                    from: 0,
+                    to: $this.data('count'),
+                    speed: 3000,
+                    refreshInterval: 50
+                });
+            });
+        });
+
+        document.addEventListener("scroll", function () {
+            var scrollPosition = window.scrollY || document.documentElement.scrollTop;
+            var scrollTrigger = 1500; // px, adjust accordingly
+
+            if (scrollPosition > scrollTrigger) {
+                var myModal = new bootstrap.Modal(document.getElementById('scrollModal'), {
+                    keyboard: false
+                });
+                myModal.show();
+                document.removeEventListener("scroll", arguments.callee);
+            }
+        });
+
+        document.getElementById('buyNowBtn').addEventListener('click', function () {
+            window.location.href = 'merchandise.html';
+        });
 
 
+
+    </script>s
 </body>
 
 
