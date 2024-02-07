@@ -2417,7 +2417,8 @@ footer:not(.footer-light) #form_subscribe.form-dark input[type=text] {
 
 /* ------------------------------ */
 address {
-    margin-top: 20px;
+    margin: 0 auto;
+    width: fit-content;
 }
 
 address span {
@@ -9831,7 +9832,8 @@ a.img-icon-zoom {
 
 footer .widget {
     border: none;
-    margin-bottom: 0;
+    margin: 0 auto;
+    width: fit-content;
 }
 
 .widget_tags ul {
@@ -10813,6 +10815,18 @@ i.big {
     border: solid 4px rgba(255, 255, 255, .2);
     position: relative;
     
+}
+.list-boxed-s1 li img {
+    z-index: 99;
+    width: 90%;
+    height: 18rem;
+    position: relative;
+}
+.list-boxed-s1-div {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .list-boxed-s1 h3{

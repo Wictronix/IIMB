@@ -28,6 +28,24 @@
   <!-- color scheme -->
   <link id="colors" href="css/colors/scheme-02.css" rel="stylesheet" type="text/css" />
   <link href="css/coloring.css" rel="stylesheet" type="text/css" />
+  <style>
+    html {
+      background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+    }
+
+    #stars, #stars2, #stars3 {
+      position: absolute;
+    }
+    @keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}
+
+  </style>
   
 </head>
 
@@ -102,6 +120,10 @@
 
 
     <section id="section-schedule" aria-label="section-services-tab" data-bgimage="url(images-dj/background/1.jpg)">
+      <div id='stars'></div>
+<div id='stars2'></div>
+<div id='stars3'></div>
+
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg-12">
@@ -135,7 +157,12 @@
                     <div class="col-md-12 text-center">
                       <ul class="list-boxed-s1 p-0">
                         <li>
-                          <h3>DJ Neurogenic</h3><span></span>
+                          <img src="./images-dj/gradient.png">
+                          <div class="list-boxed-s1-div">
+                            <h3>Event: DJ Neurogenic</h3><span></span>
+                            <h3>Time: 3pm</h3>
+                            <h3>Venue: hall of fame</h3>
+                          </div>
                         </li>
                         <li>
                           <h3>Stylewort</h3><span></span>
@@ -337,6 +364,40 @@
   <script src="js/countdown-custom.js"></script>
   <script src="js/cookit.js"></script>
   <script src="js/designesia.js"></script>
+  <script>
+    function generateRandomBoxShadow(n) {
+      let boxShadow = '';
+      for (let i = 0; i < n; i++) {
+        boxShadow += `${getRandomInt(2000)}px ${getRandomInt(2000)}px #FFF`;
+        if (i < n - 1) boxShadow += ', ';
+      }
+      return boxShadow;
+    }
+
+    function getRandomInt(max) {
+      return Math.floor(Math.random() * max);
+    }
+
+    const stars = document.querySelectorAll('#stars, #stars2, #stars3');
+    stars.forEach(star => {
+      const size = parseInt(star.id.replace('stars', ''));
+      star.style.width = size + 'px';
+      star.style.height = size + 'px';
+      star.style.background = 'transparent';
+      star.style.boxShadow = generateRandomBoxShadow(size === 1 ? 700 : (size === 2 ? 200 : 100));
+      star.style.animation = `animStar ${(size === 1 ? 50 : (size === 2 ? 100 : 150))}s linear infinite`;
+
+      const after = document.createElement('div');
+      after.style.content = ' ';
+      after.style.position = 'absolute';
+      after.style.top = '2000px';
+      after.style.width = size + 'px';
+      after.style.height = size + 'px';
+      after.style.background = 'transparent';
+      after.style.boxShadow = star.style.boxShadow;
+      star.appendChild(after);
+    });
+  </script>
 </body>
 
 </html>
