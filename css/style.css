@@ -3159,7 +3159,7 @@ a.btn-link {
 
 .spacer-single {
     width: 100%;
-    height: 30px;
+    height: 50px;
     display: block;
     clear: both;
 }
@@ -8911,9 +8911,58 @@ section.about {
     padding: 90px 0 40px 0;
 }
 
-.about .about-content {
-    margin-top: 3rem;
+.about .row {
+    align-items: center;
 }
+
+.about .de-image-text {
+    width: 100%;
+    height: auto; /* Ensure this has a minimum height if the images don't provide one */
+    position: relative;
+    scale: 1.1;
+    overflow: hidden; /* Ensures that absolutely positioned children don't overflow the container */
+}
+
+.about .de-image-text .img-fluid {
+    width: 100%;
+    height: 100%;
+    transition: 650ms ease;
+}
+
+/* Position the first image absolutely and the second image normally */
+.about .de-image-text .img-fluid-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.about .de-image-text .img-fluid-2 {
+    display: block; /* Ensures the second image takes up space, giving the container height */
+    z-index: 1;
+    scale: 1.1;
+    transition: opacity 650ms ease;
+}
+
+.about .de-image-text .img-fluid-1:hover {
+    opacity: 0; /* Makes the top image fully transparent on hover */
+}
+
+.about .de-image-text .img-fluid-1:hover ~ .img-fluid-2 {
+    opacity: 1; /* Makes the bottom image fully visible when the top image is hovered */
+    filter: none; /* Removes any filters, making the image clear */
+    transition: opacity 650ms ease;
+
+}
+
+.about .about-content .about-text {
+    color: black;
+    font-weight: 800;
+    background-image: url(../images-dj/aboutbg.jpeg) !important;
+    padding: 7rem;
+    background-position: center;
+}
+
 .statistics .stat-box {
     margin: 2rem 0;
 }
@@ -8931,6 +8980,10 @@ section.about {
     top: -5px;
     font-size: 3rem;
     opacity: 1; /* Make the plus sign always visible */
+  }
+
+  #section-date {
+    padding: 4rem 0;
   }
   
 
@@ -14518,6 +14571,25 @@ a.btn-slider:hover {
 .logo-carousel li img {
     width: auto;
 }
+.carousel-inner .carousel-caption {
+    position: absolute;
+    top: 13rem;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 0;
+    text-align: right;
+    text-shadow: none;
+}
+
+.carousel-inner .carousel-container {
+    display: table;
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
 
 
 /* mdb carousel */
@@ -14547,6 +14619,7 @@ a.btn-slider:hover {
         background-size: cover;
         background-position: center center;
       }
+      
 
       #de-carousel .carousel-control-prev-icon:after{
         content: '\f104';

@@ -79,7 +79,7 @@ header.smaller,
 .dark-scheme section,
 .de_tab.tab_style_4 .de_nav.de_nav_dark li,
 body::-webkit-scrollbar-track{
-    background: #371990;
+    background: var(--color5);
 }
 
 .pricing-s1:hover .mid{

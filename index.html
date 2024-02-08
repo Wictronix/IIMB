@@ -66,8 +66,6 @@
         /* Styles for laptops and larger screens */
         @media (min-width: 769px) {
             #video1 {
-                padding-top: 13vh; /* Set padding for laptops and larger screens */
-                padding-left: 1vh;
                 height: 80%;
             }
         }
@@ -167,37 +165,26 @@
                     <!-- Single item -->
                     <div class="carousel-item active" data-bgimage="url(images-dj/slider/1.jpg)">
                         <div id="video1">
-                            <video class="card-img-bottom" autoplay="" loop="" muted="" style="width: 100%; height: 100vh;">
+                            <video class="card-img-bottom" autoplay="" loop="" muted="" style="width: 100%;">
                                 <source src="./compressed videos/Video1 Index.mp4" type="video/mp4">
+                                
                             </video>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item" data-bgimage="url(images-dj/slider/2.jpg)">
-                        <div class="mask">
-                            <div class="d-flex justify-content-center align-items-center h-100">
-                                <div class="container text-white text-center">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <h1 class="ultra-big mb-3 wow fadeInUp">
-                                                UNMAAD '24
-                                                <br><span
-                                                    class="id-color">IIMB</span></h1>
-                                            <div class="col-md-6 offset-md-3">
-                                                <p class="lead wow fadeInUp" data-wow-delay=".3s">The biggest music
-                                                    event in decades. Attended by more than 100 musicians from all over
-                                                    the world. Get your ticket now!</p>
-                                            </div>
-                                            <div class="spacer-10"></div>
-                                            <a href="#section-artists" class="btn-main wow fadeInUp"
-                                                data-wow-delay=".6s">Explore</a>
-                                        </div>
+                            <div class="carousel-caption">
+                                <div class="col-md-12 carousel-container">
+                                    <h1 class="ultra-big mb-3 wow fadeInUp id-color">
+                                        UNMAAD '24</h1>
+                                    <div class="col-md-6 offset-md-3">
+                                        <p class="lead wow fadeInUp" data-wow-delay=".3s">The biggest music
+                                            event in decades. Attended by more than 100 musicians from all over
+                                            the world. Get your ticket now!</p>
                                     </div>
+                                    <div class="spacer-10"></div>
+                                    <a href="#section-artists" class="btn-main wow fadeInUp"
+                                        data-wow-delay=".6s">Explore</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Single item -->
 
                     <div class="carousel-item" data-bgimage="url(images-dj/slider/3.jpg)">
                         <div class="mask">
@@ -270,32 +257,32 @@
                         <div class="col-lg-12">
                             <div class="text-center">
                                 <div class="wm wow slideInUp">About</div>
-                                <h2 class="wow fadeInUp" data-wow-delay=".2s"><span class="id-color">About Us</span>
-                                </h2>
+                                <h2 class="wow fadeInUp" data-wow-delay=".2s"><span class="id-color">About Us</span></h2>
                                 <div class="small-border bg-color-2"></div>
                                 <div class="spacer-single"></div>
                             </div>
                         </div>
                         <div class="about-content row">
-                            <div class="col-md-5 mb-sm-30">
+                            <div class="col-md-3 mb-sm-30">
                                 <div class="de-image-text s2 wow fadeInLeft">
-                                    <img src="images-dj/main logo.png" class="img-fluid" alt="">
+                                    <div>
+
+                                        <img src="images-dj/main logo.png" class="img-fluid img-fluid-1" alt="">
+                                        <img src="images-dj/logobg.jpeg" class="img-fluid img-fluid-2" alt="">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-7 mb-sm-30">
+                            <div class="col-md-9 mb-sm-30 about-text">
                                 <div class="wow fadeInRight">
                                     <h1>Welcome To Unmaad 2024</h1>
                                     <p>IIM Bangalore's annual cultural festival, "Unmaad 2024", is renowned as one of
                                         the country's biggest business school cultural festivals. The event is scheduled
                                         to take place offline for the first time in two years from February 23rd to
                                         February 25th, 2024, providing 3 days of uninterrupted entertainment.
-                                        <br>
                                         Unmaad draws attendees from all across India and provides a platform to display
                                         your abilities in competitions that include, among other things, street dramas,
                                         musical and dance performances, quizzes, debates, and the grand Unmaad fashion
-                                        show!
-                                        <br>
-                                        The event has hosted artists like Mohit Chauhan, The Yellow Diary, Shankar
+                                        show! The event has hosted artists like Mohit Chauhan, The Yellow Diary, Shankar
                                         Ehsaan Loy, KK, Kailash Kher, Lucky Ali, Strings, Jethro Tull, the Indian Ocean,
                                         The Local Train, Agam, Benny Dayal, Salim-Sulaiman and Prateek Kuhad.
                                     </p>
@@ -305,6 +292,7 @@
                     </div>
                 </div>
             </section>
+            
 
             <!-- Bootstrap Modal for Merch Advertisement -->
             <div class="modal fade" id="scrollModal" tabindex="-1" aria-labelledby="scrollModalLabel"
