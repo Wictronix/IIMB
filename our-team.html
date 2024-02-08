@@ -128,6 +128,27 @@
         #group-photo img {
             border-radius: 2rem;
         }
+        #subheader {
+            background-image: url(images-dj/team.jpg);
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Styles for laptops and larger screens */
+        @media (min-width: 769px) {
+            #subheader {
+                margin-top: 11.5vh;
+            }
+        }
+
+        /* Styles for mobile devices */
+        @media (max-width: 768px) {
+            #subheader {
+                width: fit-content;
+                height: fit-content;
+            }
+        }
     </style>
 </head>
 
@@ -149,7 +170,7 @@
                                         <a href="index.html">
                                             <img alt="" src="images-dj/logo-light.png" />
                                         </a>
-                                        <h4>UNMAAD</h4>
+                                        <h4 style="font-family: Lemonade Stand;">UNMAAD '24
                                     </div>
                                     <!-- logo close -->
                                 </div>
@@ -198,7 +219,7 @@
             <div id="top"></div>
 
             <!-- section begin -->
-            <section id="subheader" class="text-light" data-bgimage="url(images-dj/background/subheader.jpg) bottom">
+            <section id="subheader" class="text-light">
                 <div class="center-y relative text-center">
                     <div class="container">
                         <div class="row">
