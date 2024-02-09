@@ -8954,9 +8954,12 @@ section.about {
     transition: opacity 650ms ease;
 
 }
-
-.about .about-content .about-text {
+.about .container {
+    min-width: 100%;
+}
+.about .about-content {
     color: black;
+    min-width: 100vw !important;
     font-weight: 800;
     background-image: url(../images-dj/aboutbg.jpeg) !important;
     padding: 7rem;
