@@ -8956,13 +8956,17 @@ section.about {
 }
 
 .about .about-content .about-text {
-    color: black;
-    font-weight: 800;
+    font-weight: 700;
     background-image: url(../images-dj/aboutbg.jpeg) !important;
-    padding: 7rem;
+    padding: 4rem;
     background-position: center;
 }
 
+.about .about-content .about-text .wow{
+    color: black;
+    padding: 2rem 9rem;
+
+}
 .statistics .stat-box {
     margin: 2rem 0;
 }
