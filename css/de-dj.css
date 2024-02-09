@@ -32,9 +32,9 @@ h2.s2{
 }
 
 h1.ultra-big{
-    font-size: 200px;
+    font-size: 140px;
     text-transform: uppercase;
-    line-height: .8em;
+    line-height: 1em;
     font-weight: 900;
 }
 

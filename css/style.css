@@ -16,7 +16,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&amp;display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@200;300;400;500;600;700;800&amp;display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:800');
 /* ================================================== */
 
 
@@ -3542,7 +3542,7 @@ h1.very-big {
 }
 
 h1.ultra-big {
-    font-size: 140px;
+    font-size: 100px;
     line-height: 120px;
     letter-spacing: -6px;
     font-weight: 700;
@@ -8144,6 +8144,42 @@ header.header-mobile #mainmenu>li>span {
     -webkit-animation-name: widthInFade;
     animation-name: widthInFade;
 }
+
+
+/* .carousel-container {
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 4em/1 'Open Sans', Impact;
+    text-transform: uppercase;
+  }
+  
+  svg {
+    width: 100%;
+    height: 50vh;
+  }
+  
+  .text {
+    fill: none;
+    stroke-width: 3;
+    stroke-linejoin: round;
+    stroke-dasharray: 70 390; 
+    stroke-dashoffset: 0;
+    animation: stroke 8s infinite linear;
+  }
+  
+  
+  .text:nth-child(5n + 1) { stroke: #F2385A; animation-delay: -1.6s; } 
+  .text:nth-child(5n + 2) { stroke: #F5A503; animation-delay: -3.2s; } 
+  .text:nth-child(5n + 3) { stroke: #E9F1DF; animation-delay: -4.8s; } 
+  .text:nth-child(5n + 4) { stroke: #56D9CD; animation-delay: -6.4s; } 
+  .text:nth-child(5n + 5) { stroke: #3AA1BF; animation-delay: -8s; }  
+  
+  @keyframes stroke {
+    100% { stroke-dashoffset: -460; } 
+  } */
+  
 
 /* ================================================== */
 
@@ -14400,6 +14436,18 @@ a.btn-slider:hover {
     border-bottom: solid 1px rgba(255, 255, 255, .3);
 }
 
+
+img.gif-1{
+    width:8rem;
+    margin-left:22rem;
+    margin-top:-4rem;
+}
+
+img.gif-2{
+    width:8rem;
+    margin-left:-51rem;
+    margin-bottom: -3rem;
+}
 /* ================================================== */
 
 
@@ -15065,6 +15113,9 @@ img {
         display: none;
     }
 
+    .gif-1,.gif-2{
+        margin:0;
+    }
     .col-right {
         position: absolute;
         top: -82px;
