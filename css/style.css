@@ -8954,18 +8954,19 @@ section.about {
     transition: opacity 650ms ease;
 
 }
-.about .container {
-    min-width: 100%;
-}
-.about .about-content {
-    color: black;
-    min-width: 100vw !important;
-    font-weight: 800;
+
+.about .about-content .about-text {
+    font-weight: 700;
     background-image: url(../images-dj/aboutbg.jpeg) !important;
-    padding: 7rem;
+    padding: 4rem;
     background-position: center;
 }
 
+.about .about-content .about-text .wow{
+    color: black;
+    padding: 2rem 9rem;
+
+}
 .statistics .stat-box {
     margin: 2rem 0;
 }
