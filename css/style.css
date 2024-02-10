@@ -8504,14 +8504,13 @@ table thead {
     font-weight: bold;
 }
 
-p.lead {
-    font-size: 18px;
-    line-height: 1.7em;
+h3.lead {
+    font-size: 40px;
     margin-top: 0;
-    font-weight: 300;
+    font-weight: 500;
 }
 
-p.lead.big {
+h3.lead.big {
     font-size: 18px;
 }
 
@@ -15113,8 +15112,22 @@ img {
         display: none;
     }
 
+    
+
     .gif-1,.gif-2{
         margin:0;
+    }
+
+    .about .about-content .about-text {
+        background-image: none;
+        padding: 0rem;
+    }
+    
+    .about .about-content .about-text .wow{
+        color: black;
+        padding: 7rem 0.5rem;
+        text-align: justify;
+    
     }
     .col-right {
         position: absolute;
