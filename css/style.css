@@ -1,25 +1,7 @@
 /* ================================================== */
-
-
-/* Rockfest
-/* created by designesia
-
 @charset "utf-8";
 
 /* ================================================== */
-
-
-/* import custom fonts */
-
-
-/* ================================================== */
-
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&amp;display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@200;300;400;500;600;700;800&amp;display=swap');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:800');
-/* ================================================== */
-
-
 /* import fonts icon */
 
 
@@ -29,6 +11,22 @@
 @import url("../fonts/elegant_font/HTML_CSS/style.css");
 @import url("../fonts/et-line-font/style.css");
 @import url("../fonts/icofont/icofont.min.css");
+
+/* import custom fonts */
+@font-face {
+    font-family: Lemonade;
+    src: url(./fonts/lemonade.otf);
+  }
+
+/* ================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&amp;display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@200;300;400;500;600;700;800&amp;display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:800');
+/* ================================================== */
+
+
+
 
 * {
     --body-font: "Work Sans", Helvetica, Arial, sans-serif;
@@ -3545,9 +3543,10 @@ h1.very-big {
 h1.ultra-big {
     font-size: 100px;
     line-height: 120px;
-    letter-spacing: -6px;
+    letter-spacing: 20px;
     font-weight: 700;
     margin-bottom: 0;
+    font-family: Lemonade;
 }
 
 h1.ultra-big span {
@@ -8950,14 +8949,14 @@ section.about {
 .about .row {
     align-items: center;
 }
-
+/* 
 .about .de-image-text {
     width: 100%;
-    height: auto; /* Ensure this has a minimum height if the images don't provide one */
+    height: auto; 
     position: relative;
     scale: 1.1;
-    overflow: hidden; /* Ensures that absolutely positioned children don't overflow the container */
-}
+    overflow: hidden; 
+} */
 
 .about .de-image-text .img-fluid {
     width: 100%;
@@ -8992,15 +8991,15 @@ section.about {
 }
 
 .about .about-content .about-text {
-    font-weight: 700;
-    background-image: url(../images-dj/aboutbg.jpeg) !important;
-    padding: 4rem;
+    font-weight: 500;
+    background-image: url(../images-dj/aboutbg.jpg) !important;
+    padding: 6rem;
     background-position: center;
 }
 
 .about .about-content .about-text .wow{
     color: black;
-    padding: 2rem 9rem;
+    padding: 2rem;
 
 }
 .statistics .stat-box {
