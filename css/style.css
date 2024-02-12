@@ -16322,17 +16322,7 @@ img {
     .carousel-inner .carousel-capt {
         top: 5rem;
     }
-    img.gif-2 {
-        width: 8rem;
-        margin-left: 0rem;
-        margin-bottom: 0rem;
-    }
-    img.gif-1 {
-        position: absolute;
-        width: 8rem;
-        margin-left: 5rem;
-        margin-top: 0rem;
-    }
+   
     .wm {
         width: 100% !important;
         letter-spacing: 15px !important;

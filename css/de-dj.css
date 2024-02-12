@@ -122,7 +122,22 @@ body::-webkit-scrollbar-track{
 
 @media (max-width: 1199px){
     h1.ultra-big{
-        font-size: 10vw;
-        letter-spacing: 0;
+        margin-top: 4rem;
+        font-size: 14vw;
+        letter-spacing: 15px;
+    }
+
+    h3.lead{
+        font-size: 25px;
+    }
+    img.gif-2 {
+        width: 4rem;
+        margin-left: 0rem;
+        margin-bottom: 0rem;
+    }
+    img.gif-1 {
+        width: 4rem;
+        margin-left: 5rem;
+        margin-top: 0rem;
     }
 }
