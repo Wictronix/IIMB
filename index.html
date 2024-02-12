@@ -74,11 +74,8 @@
         /* Styles for mobile devices */
         @media (max-width: 768px) {
             #video1 {
-                width: max-content;
                 padding: 0;
-                /* Set padding to 0 for mobile devices */
                 background-size: auto;
-                /* You may want to adjust background-size for mobile */
             }
         }
 
@@ -174,10 +171,13 @@
                     <!-- Single item -->
                     <div class="carousel-item active" data-bgimage="url(images-dj/slider/1.jpg)">
                         <div id="video1">
-                            <video class="card-img-bottom" autoplay="" loop="" muted="" style="width: 100%;">
+                            <video class="card-img-bottom" id="desktopvideo" autoplay loop muted style="width: 100%;">
                                 <source src="./compressed videos/Video1 Index.mp4" type="video/mp4">
                             </video>
-                            <div class="carousel-caption">
+                            <video class="card-img-bottom" id="mobilevideo" autoplay loop muted style="width: 100%;">
+                                <source src="./compressed videos/Mobile opening video.mp4" type="video/mp4">
+                            </video>
+                            <div class="carousel-capt">
                                 <div class="col-md-12 carousel-container">
                                     <img class="gif-2" src="./gif/carnival-mask.gif" alt="">
                                     <h1 class="ultra-big mb-3 wow fadeInUp id-color">

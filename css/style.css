@@ -1254,6 +1254,7 @@ header.header-light .logo-2 {
     display: inline-block;
 }
 
+
 /* topbar start here */
 
 #topbar {
@@ -14622,7 +14623,7 @@ img.gif-2{
 .logo-carousel li img {
     width: auto;
 }
-.carousel-inner .carousel-caption {
+.carousel-inner .carousel-capt {
     position: absolute;
     top: 13rem;
     right: 0;
@@ -14634,7 +14635,6 @@ img.gif-2{
 }
 
 .carousel-inner .carousel-container {
-    display: table;
     width: 100%;
     height: 100%;
     margin-left: auto;
@@ -16306,4 +16306,61 @@ img {
 	transform: translate(-50%, -50%);
 	width: 100%;
 	height: 100%;
+}
+
+/* Welcome video */
+
+@media only screen and (max-width: 768px) {
+    #desktopvideo {
+        display: none;
+    }
+    #de-carousel, #de-carousel .carousel-inner, #de-carousel .carousel-item, #de-carousel .carousel-item.active {
+        height: fit-content ;
+    }
+    #mobilevideo {
+        display: block;
+    }
+    .carousel-inner .carousel-capt {
+        top: 5rem;
+    }
+    img.gif-2 {
+        width: 8rem;
+        margin-left: 0rem;
+        margin-bottom: 0rem;
+    }
+    img.gif-1 {
+        position: absolute;
+        width: 8rem;
+        margin-left: 5rem;
+        margin-top: 0rem;
+    }
+    .wm {
+        width: 100% !important;
+        letter-spacing: 15px !important;
+        font-size: 80px;
+        line-height: 65px;
+        margin-left: 0 !important;
+    }
+}
+@media only screen and (max-width: 468px) {
+    #section-date {
+        padding: 1rem 0;
+    }
+    .countdown-section {
+        padding: .5rem;
+    }
+    .countdown-amount {
+        font-size: 40px;
+    }
+    .countdown-period {
+        font-size: 10px;
+    }
+}
+
+
+@media all and (min-width: 768px) {
+
+#mobilevideo {
+    display: none;
+}
 }
