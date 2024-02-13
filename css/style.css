@@ -223,7 +223,6 @@ header.autoshow.scrollOff {
 }
 
 header div#logo {
-    font-family: "Oswald", sans-serif;
     color: white;
     display: flex;
     flex-direction: row;
@@ -235,12 +234,13 @@ header div#logo {
     transition: all 0.3s;
 }
 header #logo img {
-    margin-top: -10px;
-    height: 3rem;
+    height: 2.8rem;
     margin-right: 10px;
 }
-header #logo h4 {
-    font-family: 'Lemonada', cursive;
+header #logo h4{
+    font-family: Lemonade;
+    font-size:2.2 rem;
+    letter-spacing: 5px;
 }
 #defaultCountdown {
     filter: drop-shadow(5px 5px 6px black);
@@ -3585,8 +3585,7 @@ h2 {
     z-index: 1;
     margin-top: 0;
     margin-bottom: 10px;
-    font-size: 52px;
-    letter-spacing: 12px;
+    font-size: 1.8rem;
 }
 
 h2.style-2 {
