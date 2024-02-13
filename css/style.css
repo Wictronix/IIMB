@@ -9024,6 +9024,10 @@ section.about {
     padding: 4rem 0;
   }
   
+  #section-date .home-logos img{
+    height:5rem;
+    margin-bottom:2rem;
+  }
 
 /* ================================================== */
 
