@@ -5,26 +5,26 @@
 
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7CQVYBS1TZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7CQVYBS1TZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-7CQVYBS1TZ');
-</script>
+        gtag('config', 'G-7CQVYBS1TZ');
+    </script>
     <title>UNMAAD - IIMB</title>
-    
+
     <meta content="text/html" charset="utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="Unmaad - IIMB" name="description" />
     <meta content="Unmaad, IIMB, Cultural fest" name="keywords" />
     <meta content="WictroniX" name="author" />
     <meta name="robots" content="index, follow" />
-    <meta property="og:title" content="UNMAAD - IIMB"/>
+    <meta property="og:title" content="UNMAAD - IIMB" />
     <meta property="og:type" content="image" />
     <meta property="og:url" content="https://www.unmaad.com/" />
-    <meta property="og:image" content="https://www.unmaad.com/favicon.ico"/>
+    <meta property="og:image" content="https://www.unmaad.com/favicon.ico" />
     <link rel="icon" href="logo.png">
     <!-- CSS Files
     ================================================== -->
@@ -63,6 +63,13 @@
                 transform: translateY(-2000px);
             }
         }
+
+        @media only screen and (max-width: 600px) {
+            #look{
+                min-width: 50%;
+            }
+        }
+
     </style>
 
 </head>
@@ -93,8 +100,10 @@
                                         <a href="index.html">
                                             <img alt="" src="images-dj/logo-light.png" />
                                         </a>
-                                        <a href="index.html"><h4>UNMAAD '24
-                                        </h4></a> 
+                                        <a href="index.html">
+                                            <h4>UNMAAD '24
+                                            </h4>
+                                        </a>
                                     </div>
                                     <!-- logo close -->
                                 </div>
@@ -157,29 +166,83 @@
                         </div>
                     </div>
                     <div class="spacer-single"></div>
-                    <div class="col-md-12">
+                    <div class="col-sm-12 col-md-12">
                         <div class="de_tab tab_style_4 text-center">
-                            <ul class="de_nav de_nav_dark">
-                                <li class="active" data-link="#section-services-tab">
-                                    <h3>Day <span>01</span></h3>
-                                    <h4>Feb 23, 2024</h4>
+                            <ul class="de_nav de_nav_dark look">
+                                <li class="active" id="look" data-link="#section-services-tab">
+                                    <h3>Game <span>01</span></h3>
                                 </li>
-                                <li data-link="#section-services-tab">
-                                    <h3>Day <span>02</span></h3>
-                                    <h4>Feb 24, 2024</h4>
-                                </li>
-                                <li data-link="#section-services-tab">
-                                    <h3>Day <span>03</span></h3>
-                                    <h4>Feb 25, 2024</h4>
+                                <li id="look" data-link="#section-services-tab">
+                                    <h3>Game <span>02</span></h3>
                                 </li>
                             </ul>
-                            <div class="col-lg-12">
-                                <div class="text-center">
-                                    <h2 class="wow fadeInUp" data-wow-delay=".2s"><span class="id-color"></span>Coming
-                                        Soon
-                                    </h2>
+                            <div class="de_tab_content text-left">
+                                <div id="tab1" class="tab_single_content">
+                                    <div class="row">
+                                        <div class="col-md-12 text-center">
+                                            <iframe src="https://quiz-frontend-seven.vercel.app/" width="100%" height="550vh"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab2" class="tab_single_content">
+                                    <!-- <div class="col-md-12 text-center">
+                                        <div class="row" style="counter-reset: game;
+                                                margin: auto;
+                                                width: 80%;
+                                                height: 70vh;
+                                                background: #e9b58b;
+                                                font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+                                                color: #333;">
+                                            <div class="col-md-12 text-center">
+                                                <div class="quiz">
+                                                    <div class="game-over">
+                                                        <h1>Game Over!</h1>
+                                                        <a class="play-again" target="_parent" href="#">Play Again</a>
+                                                    </div>
+
+                                                    <ul class="game-area">
+                                                        <li><input type="checkbox">
+                                                            <div class="shield"></div>
+                                                        </li>
+                                                        <li><input type="checkbox">
+                                                            <div class="shield"></div>
+                                                        </li>
+                                                        <li><input type="checkbox">
+                                                            <div class="shield"></div>
+                                                        </li>
+                                                        <li><input type="checkbox">
+                                                            <div class="shield"></div>
+                                                        </li>
+                                                        <li><input type="checkbox">
+                                                            <div class="shield"></div>
+                                                        </li>
+                                                        <li><input type="checkbox">
+                                                            <div class="shield"></div>
+                                                        </li>
+                                                        <li><input type="checkbox">
+                                                            <div class="shield"></div>
+                                                        </li>
+                                                        <li><input type="checkbox">
+                                                            <div class="shield"></div>
+                                                        </li>
+                                                        <li><input type="checkbox">
+                                                            <div class="shield"></div>
+                                                        </li>
+                                                    </ul>
+
+                                                    <h3 class="total-count">Targets Hit: &nbsp;</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                    <div class="row">
+                                        <div class="col-md-12 text-center">
+                                            <iframe src="https://carnival-game-y1ff.onrender.com" width="100%" height="700vh"></iframe>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
