@@ -111,21 +111,35 @@
                 width: 60vw !important;
                 margin-left: 20vw !important;
             }
+
+            .footer_res {
+                margin-left: 0px !important;
+            }
+
+            .foot_space {
+                margin: -5px !important;
+            }
+
+            .foot_space2 {
+                margin: 5px !important;
+            }
+
+            .div_img_wid {
+                width: 90vw !important;
+            }
+        }
+
+        .yellow-text {
+            text-shadow: 0 0 10px rgb(255, 255, 255), 0 0 20px rgb(255, 255, 255), 0 0 30px rgb(204, 204, 204);
+        }
+
+        .hidden {
+            display: none;
         }
     </style>
-    <script>
-        function scrollAfterDelay() {
-            setTimeout(function () {
-                var nextDiv = document.getElementById('section-gallery');
-                if (nextDiv) {
-                    nextDiv.scrollIntoView({ behavior: 'smooth' });
-                }
-            }, 6000); // 6 seconds delay
-        }
-    </script>
 </head>
 
-<body class="dark-scheme" onload="scrollAfterDelay()">
+<body class="dark-scheme">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHM8FH48" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
@@ -200,7 +214,7 @@
             <div id="top"></div>
             <!-- Carousel wrapper -->
             <section id="de-carousel" class="no-top no-bottom carousel slide carousel-fade shadow-2-strong"
-                data-mdb-ride="carousel">
+                data-mdb-ride="carousel" data-interval="5000">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
                     <li data-mdb-target="#de-carousel" data-mdb-slide-to="0" class="active"></li>
@@ -210,9 +224,9 @@
                 </ol>
 
                 <!-- Inner -->
-                <div class="carousel-inner">
+                <div class="carousel-inner" style="background-color: black;">
                     <!-- Single item -->
-                    <div class="carousel-item active" data-bgimage="url(images-dj/slider/1.jpg)">
+                    <div class="carousel-item active">
                         <div id="video1">
                             <video class="card-img-bottom" id="desktopvideo" autoplay loop muted style="width: 100%;">
                                 <source src="./compressed videos/video.mp4" type="video/mp4">
@@ -228,8 +242,11 @@
                                     <img class="gif-1" src="./gif/mask.gif" alt="">
 
                                     <div class="col-md-6 offset-md-3">
-                                        <h3 class="lead fadeInUp" data-wow-delay=".3s">AN AUROUS CARNIVAL</h3>
-                                        <h4 class="lead fadeInUp" data-wow-delay=".3s">23 - 25th Feb '24</h4>
+                                        <h3 class="lead fadeInUp yellow-text" data-wow-delay=".3s"
+                                            style="color: yellow;">AN AUROUS CARNIVAL
+                                        </h3>
+                                        <h4 class="lead mb-3 fadeInUp font-weight-bold fs-2" data-wow-delay=".3s">23 -
+                                            25th Feb '24</h4>
                                     </div>
                                     <div class="spacer-10"></div>
                                     <a href="accomodation.html" class="btn-main wow fadeInUp"
@@ -238,14 +255,30 @@
                             </div>
                         </div>
                     </div>
-
+                    <div class="carousel-item div_mar" style="background-color: black;margin-top: 15vh;">
+                        <div class="mask">
+                            <div class="d-flex h-100 div_img_wid" style="width:60vw;margin:auto;">
+                                <img class="img_height" style="height: 600px;" src="./images/talk_pc.jpeg" alt="">
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <!-- Inner -->
+                <!-- Controls -->
+                <a class="carousel-control-prev" href="#de-carousel" role="button" data-mdb-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#de-carousel" role="button" data-mdb-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </section>
             <!-- Carousel wrapper -->
 
-            <div class="arrow_wrap">
+            <!-- <div class="arrow_wrap">
                 <div class="arrow__up"></div>
-            </div>
+            </div> -->
 
             <section id="section-date" class="bg-color pt40 pb30">
                 <div class="container">
@@ -370,8 +403,8 @@
                     </div>
                 </div>
             </section>
-            <section id="section-gallery" data-bgimage="url(images-dj/background/2.jpg)">
-                <div class="container">
+            <section id="section-gallery" style="background-color: black;">
+                <div class=" container">
                     <div class="row">
                         <div class="col-md-12 text-center">
                             <div class="wm wow slideInUp">Gallery</div>
@@ -758,43 +791,45 @@
         <!-- content close -->
         <a href="#" id="back-to-top"></a>
         <!-- footer begin -->
-        <footer data-bgimage="url(images-dj/background/3.jpg)">
+        <footer style="background-color: black;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 col-sm-12 col-xs-1">
                         <img src="./images-dj/logo-light.png" alt="" width="300px">
                     </div>
                     <div class="col-md-2 col-sm-3 col-xs-1">
-                        <div class="widget">
+                        <div class="widget  footer_res">
                             <h5>Quick Links</h5>
                             <ul>
-                                <li><a href="./sponsors.html">Sponsors</a></li>
-                                <li><a href="./competition.html">Competitions</a></li>
-                                <li><a href="./pro-nights.html">Pro-Nites</a></li>
-                                <li><a href="./speaker.html">Speakers</a></li>
-                                <li><a href="./accomodation.html">Registration</a></li>
+                                <li class="foot_space2"><a href="./sponsors.html">Sponsors</a></li>
+                                <li class="foot_space2"><a href="./competition.html">Competitions</a></li>
+                                <li class="foot_space2"><a href="./pro-nights.html">Pro-Nites</a></li>
+                                <li class="foot_space2"><a href="./speaker.html">Speakers</a></li>
+                                <li class="foot_space2"><a href="./accomodation.html">Registration</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-md-2 col-sm-3 col-xs-1">
-                        <div class="widget">
-                            <h5>Quick Links</h5>
+                        <div class="widget  footer_res">
+                            <h5>Quick Links 2</h5>
                             <ul>
-                                <li><a href="./merchandise.html">Merchandise</a></li>
-                                <li><a href="./schedule.html">Schedule</a></li>
-                                <li><a href="./our-team.html">Our Team</a></li>
-                                <li><a href="./virtual.html">Virtual Expedition</a></li>
-                                <li><a href="./contact.html">Contact Us</a></li>
+                                <li class="foot_space2"><a href="./merchandise.html">Merchandise</a></li>
+                                <li class="foot_space2"><a href="./schedule.html">Schedule</a></li>
+                                <li class="foot_space2"><a href="./our-team.html">Our Team</a></li>
+                                <li class="foot_space2"><a href="./virtual.html">Virtual Expedition</a></li>
+                                <li class="foot_space2"><a href="./contact.html">Contact Us</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6 col-xs-1">
-                        <div class="widget">
+                        <div class="widget  footer_res">
                             <h5>Contact Info</h5>
                             <address class="s1">
-                                <span><i class="id-color fa fa-user-o fa-lg"></i>Vansh Lakhina</span>
-                                <span><i class="id-color fa fa-phone fa-lg"></i>+91 93121 77877</span>
-                                <span><i class="id-color fa fa-envelope fa-lg"></i><a
+                                <span class=" foot_space"><i class="id-color fa fa-user-o fa-lg"></i>Vansh
+                                    Lakhina</span>
+                                <span class=" foot_space"><i class="id-color fa fa-phone fa-lg"></i>+91 93121
+                                    77877</span>
+                                <span class=" foot_space"><i class="id-color fa fa-envelope fa-lg"></i><a
                                         href="mailto:contact@example.com">unmaad@iimb.ac.in</a></span>
                                 <div class="de-flex-col">
                                     <div class="social-icons">
@@ -820,8 +855,8 @@
                                 <div class="de-flex-col">
                                     <a href="index.html">
 
-                                        <span class="copy">&copy; Copyright 2024 - Powered By <img alt="WictroniX"
-                                                class="f-logo" src="./images-dj/white.png" /></span>
+                                        <span class="copy">Powered By <img alt="WictroniX" class="f-logo"
+                                                src="./images-dj/white.png" /><br /></span>
                                     </a>
                                 </div>
 
@@ -866,26 +901,6 @@
                 });
             });
         });
-
-        document.addEventListener("scroll", function () {
-            var scrollPosition = window.scrollY || document.documentElement.scrollTop;
-            var scrollTrigger = 1500; // px, adjust accordingly
-
-            if (scrollPosition > scrollTrigger) {
-                var myModal = new bootstrap.Modal(document.getElementById('scrollModal'), {
-                    keyboard: false
-                });
-                myModal.show();
-                document.removeEventListener("scroll", arguments.callee);
-            }
-        });
-
-        document.getElementById('buyNowBtn').addEventListener('click', function () {
-            window.location.href = 'merchandise.html';
-        });
-
-
-
     </script>
 </body>
 
