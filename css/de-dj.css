@@ -129,6 +129,7 @@ body::-webkit-scrollbar-track{
 
     h3.lead{
         font-size: 25px;
+        text-shadow: none;
     }
     img.gif-2 {
         width: 4rem;

@@ -8507,6 +8507,8 @@ h3.lead {
     font-size: 40px;
     margin-top: 0;
     font-weight: 500;
+    text-shadow: 0 0 10px rgb(255, 255, 255), 0 0 20px rgb(255, 255, 255), 0 0 30px rgb(204, 204, 204);
+    color: yellow;
 }
 
 h3.lead.big {
@@ -13728,6 +13730,7 @@ header.smaller,
     font-family: FontAwesome;
     content: "\f104";
     font-size: 32px;
+    color: white;
 }
 
 .carousel-control-next-icon:after{
@@ -16316,9 +16319,9 @@ img {
     #desktopvideo {
         display: none;
     }
-    #de-carousel, #de-carousel .carousel-inner, #de-carousel .carousel-item, #de-carousel .carousel-item.active {
+    /* #de-carousel, #de-carousel .carousel-inner, #de-carousel .carousel-item, #de-carousel .carousel-item.active {
         height: fit-content ;
-    }
+    } */
     #mobilevideo {
         display: block;
     }
