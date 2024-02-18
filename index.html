@@ -127,12 +127,14 @@
             .div_img_wid {
                 width: 90vw !important;
             }
+            .carousel-item.div_mar {
+                margin: 5vh !important;
+            }
+            .carousel-item.div_mar .mask img {
+                height: 500px !important;
+            }
         }
-
-        .yellow-text {
-            text-shadow: 0 0 10px rgb(255, 255, 255), 0 0 20px rgb(255, 255, 255), 0 0 30px rgb(204, 204, 204);
-        }
-
+        
         .hidden {
             display: none;
         }
@@ -216,22 +218,22 @@
             <section id="de-carousel" class="no-top no-bottom carousel slide carousel-fade shadow-2-strong"
                 data-mdb-ride="carousel" data-interval="5000">
                 <!-- Indicators -->
-                <ol class="carousel-indicators">
+                <!-- <ol class="carousel-indicators">
                     <li data-mdb-target="#de-carousel" data-mdb-slide-to="0" class="active"></li>
                     <li data-mdb-target="#de-carousel" data-mdb-slide-to="1"></li>
                     <li data-mdb-target="#de-carousel" data-mdb-slide-to="2"></li>
                     <li data-mdb-target="#de-carousel" data-mdb-slide-to="3"></li>
-                </ol>
+                </ol> -->
 
                 <!-- Inner -->
-                <div class="carousel-inner" style="background-color: black;">
+                <div class="carousel-inner">
                     <!-- Single item -->
                     <div class="carousel-item active">
                         <div id="video1">
-                            <video class="card-img-bottom" id="desktopvideo" autoplay loop muted style="width: 100%;">
+                            <video id="desktopvideo" autoplay loop muted style="width: 100%;">
                                 <source src="./compressed videos/video.mp4" type="video/mp4">
                             </video>
-                            <video class="card-img-bottom" id="mobilevideo" autoplay loop muted style="width: 100%;">
+                            <video id="mobilevideo" autoplay loop muted style="width: 100%;">
                                 <source src="./compressed videos/Mobile opening video.mp4" type="video/mp4">
                             </video>
                             <div class="carousel-capt">
@@ -242,10 +244,8 @@
                                     <img class="gif-1" src="./gif/mask.gif" alt="">
 
                                     <div class="col-md-6 offset-md-3">
-                                        <h3 class="lead fadeInUp yellow-text" data-wow-delay=".3s"
-                                            style="color: yellow;">AN AUROUS CARNIVAL
-                                        </h3>
-                                        <h4 class="lead mb-3 fadeInUp font-weight-bold fs-2" data-wow-delay=".3s">23 -
+                                        <h3 class="lead fadeInUp">AN AUROUS CARNIVAL</h3>
+                                        <h4 class="lead mb-3 fadeInUp font-weight-bold fs-2">23 -
                                             25th Feb '24</h4>
                                     </div>
                                     <div class="spacer-10"></div>
@@ -255,7 +255,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item div_mar" style="background-color: black;margin-top: 15vh;">
+                    <div class="carousel-item div_mar" style="margin-top: 15vh;">
                         <div class="mask">
                             <div class="d-flex h-100 div_img_wid" style="width:60vw;margin:auto;">
                                 <img class="img_height" style="height: 600px;" src="./images/talk_pc.jpeg" alt="">
