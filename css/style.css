@@ -243,8 +243,9 @@ header #logo h4{
     letter-spacing: 5px;
 }
 #defaultCountdown {
-    filter: drop-shadow(5px 5px 6px black);
-    backdrop-filter: blur(8px);
+    filter: drop-shadow(3px 3px 4px black);
+    backdrop-filter: blur(2px);
+    font-size: 3.2rem;
 }
 
 header .logo-2 {
@@ -16136,6 +16137,10 @@ img {
         column-gap: 20px;
     }
 
+    #defaultCountdown{
+        font-size: 1.2rem;
+    }
+
 }
 
 /* -------------------------------------------------- 
@@ -16144,8 +16149,8 @@ img {
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
     .container {
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 25px;
+        padding-right: 25px;
     }
 
     .feature-box-image,
