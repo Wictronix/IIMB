@@ -27,30 +27,30 @@
 
 .theTitle {
   font-family: 'sukhfont', sans-serif;
-  font-size: 8.5rem; /* Ensure this size is applied */
+  font-size: 6.5rem; /* Ensure this size is applied */
 }
 
 @media (max-width: 1200px) {
   .theTitle {
-    font-size: 7.7rem; /* Adjust size for medium screens */
+    font-size: 5.7rem; /* Adjust size for medium screens */
   }
 }
 
 @media (max-width: 992px) {
   .theTitle {
-    font-size: 6rem; /* Adjust size for smaller screens */
+    font-size: 4rem; /* Adjust size for smaller screens */
   }
 }
 
 @media (max-width: 768px) {
   .theTitle {
-    font-size: 5.3rem; /* Adjust size for tablets */
+    font-size: 3.3rem; /* Adjust size for tablets */
   }
 }
 
 @media (max-width: 576px) {
   .theTitle {
-    font-size: 4rem; /* Adjust size for mobile devices */
+    font-size: 2rem; /* Adjust size for mobile devices */
   }
 }
 
