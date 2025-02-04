@@ -6,3 +6,10 @@
   --color5: #000000;
   --primary-color-rgb: 205, 255, 107;
 }
+
+/**
+ * This function takes an array of numbers and returns the sum of all elements.
+ *
+ * @param {number[]} numbers - An array of numbers to be summed.
+ * @returns {number} The sum of all numbers in the array.
+ */
