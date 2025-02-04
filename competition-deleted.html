@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Mirrored from madebydesignesia.com/themes/rockfest/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Jan 2024 19:45:11 GMT -->
 
 <head>
     <!-- Google tag (gtag.js) -->
@@ -11,7 +12,7 @@
 
         gtag('config', 'G-7CQVYBS1TZ');
     </script>
-    <title>Events - UNMAAD - IIMB</title>
+    <title>UNMAAD - IIMB</title>
 
     <meta content="text/html" charset="utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -29,9 +30,6 @@
     <link id="bootstrap" href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link id="bootstrap-grid" href="css/bootstrap-grid.min.css" rel="stylesheet" type="text/css" />
     <link id="bootstrap-reboot" href="css/bootstrap-reboot.min.css" rel="stylesheet" type="text/css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@500&display=swap" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet" type="text/css" />
     <link href="css/owl.carousel.css" rel="stylesheet" type="text/css" />
     <link href="css/owl.theme.css" rel="stylesheet" type="text/css" />
@@ -44,39 +42,9 @@
     <!-- color scheme -->
     <link id="colors" href="css/colors/scheme-02.css" rel="stylesheet" type="text/css" />
     <link href="css/coloring.css" rel="stylesheet" type="text/css" />
-    <style>
-        html {
-            background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
-        }
-
-        #stars,
-        #stars2,
-        #stars3 {
-            position: absolute;
-        }
-
-        @keyframes animStar {
-            from {
-                transform: translateY(0px);
-            }
-
-            to {
-                transform: translateY(-10000px);
-            }
-        }
-    </style>
-
 </head>
 
 <body class="dark-scheme">
-
-    <svg id="motionSimulation" viewBox="0 0 200 100" preserveAspectRatio="none">
-        <circle id="getMe" r="0" fill="none">
-            <animateMotion dur="10s" repeatCount="indefinite"
-                path="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
-        </circle>
-    </svg>
-
     <div id="wrapper">
         <div id="preloader">
             <div class="preloader1"></div>
@@ -95,7 +63,8 @@
                                             <img loading="lazy" alt="" src="images-dj/logo-light.png" />
                                         </a>
                                         <a href="index.html">
-                                            <h4>UNMAAD '25 </h4>
+                                            <h4>UNMAAD '25
+                                            </h4>
                                         </a>
                                     </div>
                                     <!-- logo close -->
@@ -139,26 +108,21 @@
                 </div>
             </div>
         </header>
-
-        <p><br></p><p><br></p><p><br></p><p><br></p>
-
+        <!-- header close -->
+        <!-- content begin -->
         <div class="no-bottom no-top" id="content">
             <div id="top"></div>
             <section id="section-Events">
-            <div id='stars'></div>
-            <div id='stars2'></div>
-            <div id='stars3'></div>
                 <div class="container">
                     <div class="row justify-content-lg-around">
                         <div class="col-lg-12">
                             <div class="text-center">
-                                <div class="wm wow slideInUp" style="color: white;">Events</div>
-                                <h2 class="wow fadeInUp" data-wow-delay="2s"><span class="id-color"></span> Events
+                                <div class="wm wow slideInUp">Events</div>
+                                <h2 class="wow fadeInUp" data-wow-delay=".2s"><span class="id-color"></span> Events
                                 </h2>
                                 <div class="small-border bg-color-2"></div>
                                 <div class="spacer-single"></div>
                             </div>
-                            <p><br></p><p><br></p><p><br></p><p><br></p>
                         </div>
                         <div class="col-md-5 mb-5">
                             <a href="./dance-event.html">
@@ -233,6 +197,9 @@
 
 
 
+    </div>
+    </div>
+    </section>
 
     <!-- content close -->
     <a href="#" id="back-to-top"></a>
@@ -301,7 +268,7 @@
     <!-- footer close -->
     </div>
     <!-- Javascript Files
-  ================================================== -->
+    ================================================== -->
     <script>
         window.onload = function () {
             var video = document.getElementById('myVideo');
@@ -326,42 +293,25 @@
     <script src="js/mdb.min.js"></script>
     <script src="js/jquery.countdown.js"></script>
     <script src="js/countdown-custom.js"></script>
-
     <script src="js/designesia.js"></script>
     <script>
-        function generateRandomBoxShadow(n) {
-            let boxShadow = '';
-            for (let i = 0; i < n; i++) {
-                boxShadow += `${getRandomInt(2000)}px ${getRandomInt(2000)}px #FFF`;
-                if (i < n - 1) boxShadow += ', ';
-            }
-            return boxShadow;
-        }
-
-        function getRandomInt(max) {
-            return Math.floor(Math.random() * max);
-        }
-
-        const stars = document.querySelectorAll('#stars, #stars2, #stars3');
-        stars.forEach(star => {
-            const size = parseInt(star.id.replace('stars', ''));
-            star.style.width = size + 'px';
-            star.style.height = size + 'px';
-            star.style.background = 'transparent';
-            star.style.boxShadow = generateRandomBoxShadow(size === 1 ? 700 : (size === 2 ? 200 : 100));
-            star.style.animation = `animStar ${(size === 1 ? 50 : (size === 2 ? 100 : 150))}s linear infinite`;
-
-            const after = document.createElement('div');
-            after.style.content = ' ';
-            after.style.position = 'absolute';
-            after.style.top = '2000px';
-            after.style.width = size + 'px';
-            after.style.height = size + 'px';
-            after.style.background = 'transparent';
-            after.style.boxShadow = star.style.boxShadow;
-            star.appendChild(after);
+        $(document).ready(function () {
+            $('.counter').each(function () {
+                var $this = $(this);
+                $this.countTo({
+                    from: 0,
+                    to: $this.data('count'),
+                    speed: 4000,
+                    refreshInterval: 50,
+                    loop: True
+                });
+            });
         });
+
     </script>
 </body>
+
+
+<!-- Mirrored from madebydesignesia.com/themes/rockfest/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Jan 2024 19:45:16 GMT -->
 
 </html>
