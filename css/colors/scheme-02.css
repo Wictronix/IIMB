@@ -2,14 +2,7 @@
   --primary-color: #6FD953;
   --secondary-color: #FF3782;
   --color3: #00CAC1;
-  --color4: #ff0202 ;
-  --color5: #110101;
+  --color4: #000000 ;
+  --color5: #090312;
   --primary-color-rgb: 205, 255, 107;
 }
-
-/**
- * This function takes an array of numbers and returns the sum of all elements.
- *
- * @param {number[]} numbers - An array of numbers to be summed.
- * @returns {number} The sum of all numbers in the array.
- */
