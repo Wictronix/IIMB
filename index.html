@@ -204,7 +204,7 @@
     }
     .top-right-image {
         position: absolute;
-        top: 170px;
+        top: 450px;
         right: 100px;
         width: 17%; /* Adjust the width as needed */
         opacity: 0.8; /* Make it a bit visible */
@@ -284,6 +284,35 @@
                                         </ul>
                                     </li>
                                 </ul>
+                                <script>
+                                    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll("#mainmenu > li > a").forEach(function(menuItem) {
+        menuItem.addEventListener("click", function(event) {
+            let parentLi = this.parentElement;
+            let subMenu = parentLi.querySelector("ul");
+
+            if (subMenu) {
+                event.preventDefault(); // Prevent navigating to "#"
+                
+                // Toggle visibility
+                if (subMenu.style.display === "block") {
+                    subMenu.style.display = "none";
+                    parentLi.classList.remove("active");
+                } else {
+                    // Close all other submenus (optional)
+                    document.querySelectorAll("#mainmenu ul").forEach(ul => ul.style.display = "none");
+                    document.querySelectorAll("#mainmenu li").forEach(li => li.classList.remove("active"));
+
+                    subMenu.style.display = "block";
+                    parentLi.classList.add("active");
+                }
+            }
+        });
+    });
+});
+</script>
+                                </script>
                             </div>
                             <div class="de-flex-col">
                                 <div class="menu_side_area">
