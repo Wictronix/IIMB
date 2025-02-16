@@ -201,42 +201,52 @@
                 font-size: 1.5em !important;
                 padding: 15px 30px !important;
             }
-    }
-    .top-right-image {
-        position: absolute;
-        top: 450px;
-        right: 100px;
-        width: 17%; /* Adjust the width as needed */
-        opacity: 0.8; /* Make it a bit visible */
-        z-index: 9999; /* Ensure it stays on top */
-    }
-
-    @media (max-width: 600px) {
-        .top-right-image {
-            right: 10px;
-            width: 40%; /* Adjust the width as needed */
         }
-    }
+
+        .top-right-image {
+            position: absolute;
+            top: 100px;
+            right: 100px;
+            width: 17%;
+            opacity: 0.8;
+            z-index: 10;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        }
+
+        @media (max-width: 600px) {
+            .top-right-image {
+                right: 10px;
+                width: 40%;
+            }
+        }
+
+        /* Hide the image when the menu is open */
+        .menu-open .top-right-image {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
     </style>
 </head>
 
 <body class="dark-scheme">
     <div class="top-right-image">
-        <a href="https://www.district.in/unmaad-and-oddone-live-presents-prateek-kuhad-and-king-feb-22-23-2025/event?fbclid=PAY2xjawIQE9lleHRuA2FlbQIxMQABputMkTTDX3ebk8Id5a3ZGfft1YdmEQzfPPfCV-IHTM_3X5NfjImNw5WSlw_aem_191_nFyApFlU6np9IdFdvA">
+        <a
+            href="https://www.district.in/unmaad-and-oddone-live-presents-prateek-kuhad-and-king-feb-22-23-2025/event?fbclid=PAY2xjawIQE9lleHRuA2FlbQIxMQABputMkTTDX3ebk8Id5a3ZGfft1YdmEQzfPPfCV-IHTM_3X5NfjImNw5WSlw_aem_191_nFyApFlU6np9IdFdvA">
             <div class="card text-white event-card">
-                <img loading="lazy" src="./Cover photos/Cover photos/pronites.jpg"
-                    class="card-img-top img-fluid" alt="Event Image">
-                </a>       
-            </div>
-        
+                <img loading="lazy" src="./Cover photos/Cover photos/pronites.jpg" class="card-img-top img-fluid"
+                    alt="Event Image">
+        </a>
+    </div>
+
     </div><!-- Google Tag Manager (noscript) -->
-    
+
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHM8FH48" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div id="wrapper">
-        
+
         <!-- header begin -->
         <header class="transparent">
             <div class="container">
@@ -285,34 +295,39 @@
                                     </li>
                                 </ul>
                                 <script>
-                                   
-document.addEventListener("DOMContentLoaded", function() {
-    document.querySelectorAll("#mainmenu > li > a").forEach(function(menuItem) {
-        menuItem.addEventListener("click", function(event) {
-            let parentLi = this.parentElement;
-            let subMenu = parentLi.querySelector("ul");
+                                    document.addEventListener("DOMContentLoaded", function () {
+                                        const topRightImage = document.querySelector(".top-right-image");
+                                        const hamburgerMenu = document.querySelector("#menu-btn"); // Your actual menu toggle button
+                                        const menu = document.querySelector("#mainmenu"); // The menu that opens
 
-            if (subMenu) {
-                event.preventDefault(); // Prevent navigating to "#"
-                
-                // Toggle visibility
-                if (subMenu.style.display === "block") {
-                    subMenu.style.display = "none";
-                    parentLi.classList.remove("active");
-                } else {
-                    // Close all other submenus (optional)
-                    document.querySelectorAll("#mainmenu ul").forEach(ul => ul.style.display = "none");
-                    document.querySelectorAll("#mainmenu li").forEach(li => li.classList.remove("active"));
+                                        if (hamburgerMenu) {
+                                            hamburgerMenu.addEventListener("click", function () {
+                                                document.body.classList.toggle("menu-open"); // Toggle class on body when menu button is clicked
+                                            });
+                                        }
 
-                    subMenu.style.display = "block";
-                    parentLi.classList.add("active");
-                }
-            }
-        });
-    });
-});
-</script>
+                                        // Detect if the menu is actually open by checking computed styles
+                                        const observer = new MutationObserver(() => {
+                                            if (window.getComputedStyle(menu).display !== "none") {
+                                                document.body.classList.add("menu-open");
+                                            } else {
+                                                document.body.classList.remove("menu-open");
+                                            }
+                                        });
+
+                                        observer.observe(menu, { attributes: true, attributeFilter: ["style"] });
+
+                                        // Close menu and show image when a menu link is clicked
+                                        document.querySelectorAll("#mainmenu a").forEach(link => {
+                                            link.addEventListener("click", function () {
+                                                setTimeout(() => {
+                                                    document.body.classList.remove("menu-open");
+                                                }, 200);
+                                            });
+                                        });
+                                    });
                                 </script>
+
                             </div>
                             <div class="de-flex-col">
                                 <div class="menu_side_area">
@@ -333,123 +348,88 @@ document.addEventListener("DOMContentLoaded", function() {
             <!-- Carousel wrapper -->
             <section id="de-carousel" class="no-top no-bottom carousel slide carousel-fade shadow-2-strong"
                 data-mdb-ride="carousel" data-interval="5000">
-                <!-- Indicators -->
-                <!-- <ol class="carousel-indicators">
-                    <li data-mdb-target="#de-carousel" data-mdb-slide-to="0" class="active"></li>
-                    <li data-mdb-target="#de-carousel" data-mdb-slide-to="1"></li>
-                    <li data-mdb-target="#de-carousel" data-mdb-slide-to="2"></li>
-                    <li data-mdb-target="#de-carousel" data-mdb-slide-to="3"></li>
-                </ol> -->
 
                 <!-- Inner -->
                 <div class="carousel-inner">
                     <!-- Single item -->
                     <div class="carousel-item active">
                         <div id="video1">
-                            <video id="desktopvideo" autoplay loop muted style="width: 100%;">
+                            <video id="desktopvideo" autoplay loop muted style="width: 100%; pointer-events: none;">
                                 <source src="./compressed videos/video.mp4" type="video/mp4">
                             </video>
-                            <video id="mobilevideo" autoplay loop muted style="width: 100%;">
-                                <source src="./compressed videos/mobile.mp4" type="video/mp4">
+                            <video id="mobilevideo" autoplay loop muted
+                                style="width: 100%; pointer-events: none;"></video>
+                            <source src="./compressed videos/mobile.mp4" type="video/mp4">
                             </video>
-                            <div class="carousel-capt">
+                            <div class="carousel-capt" style="margin-top: 12em;">
                                 <div class="col-md-12 carousel-container">
-                                   <!-- ...existing code... -->
-
-                                   <p></p><p><br></p><b></br><p></p><p><br></p><p><br></p><p></p>
-<img src="./bodylogo.png" alt="" class="responsive-img">
-<style>
-.responsive-img {
-    max-width: 20%;
-    height: auto;
-    width: auto; /* Adjust the width as needed */
-}
+                                    <img src="./bodylogo.png" alt="" class="responsive-img">
+                                    <style>
+                                        .responsive-img {
+                                            max-width: 20%;
+                                        }
 
 
-@media (max-width: 768px) {
-  .responsive-img {
-    max-width: 40%; /* Adjust size for tablets and mobile devices */
-  }
-}
+                                        @media (max-width: 768px) {
+                                            .responsive-img {
+                                                max-width: 40%;
+                                            }
+                                        }
 
-@media (max-width: 576px) {
-  .responsive-img {
-    max-width: 60%; /* Adjust size for smaller mobile devices */
-  }
-}</style>
-<!-- ...existing code... -->
-                        
-                                <div class="col-md-12 carousel-container">
-                                    <h1 class="theTitle" >
+                                        @media (max-width: 576px) {
+                                            .responsive-img {
+                                                max-width: 60%;
+                                                /* Adjust size for smaller mobile devices */
+                                            }
+                                        }
+                                    </style>
+                                    <h1 class="theTitle">
                                         UNMAAD</h1>
-                                        <h4 class="theBodyText">Kalaedoscope of dreams</h4>
-                                        <h3 class="lead mb-3 fadeInUp font-weight-bold fs-2">21 -
-                                            23rd Feb '25</h3>
-                                    
+                                    <h4 class="theBodyText">Kalaedoscope of dreams</h4>
+                                    <h3 class="lead mb-3 fadeInUp font-weight-bold fs-2">21 -
+                                        23rd Feb '25</h3>
+
                                     <a href="accomodation.html" class="btn-main wow fadeInRight"
                                         data-wow-delay=".6s">Register</a>
-                                        <p></p>
-                                        <a href="for-sponser.html" class="btn-main wow fadeInLeft"
-                                        data-wow-delay=".6s">Want to be a sponsor?</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-            </section>
-         
-
-          <!--- <section id="section-date" class="bg-color">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            <div class="coming-soon-container">
-                                <h2 class="coming-soon-title wow fadeInUp" data-wow-delay=".2s">Coming Soon</h2>
-                                <div class="coming-soon-animation">
-                                    <div class="circle"></div>
-                                    <div class="circle"></div>
-                                    <div class="circle"></div>
-                                    <div class="circle"></div>
-                                    <div class="circle"></div>
+                                    <p></p>
+                                    <a href="for-sponser.html" class="btn-main wow fadeInLeft" data-wow-delay=".6s">Want
+                                        to be a sponsor?</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>--> 
+
+            </section>
+
 
             <!-- About Section -->
             <section class="about">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col-lg-12">
-                            <div class="text-center">
-                                <div class="wm wow slideInUp">About</div>
-                                <h2 class="wow fadeInUp" data-wow-delay=".2s"><span class="id-color">About Us</span>
-                                </h2>
-                                <div class="small-border bg- color-2"></div>
-                                <div class="spacer-single"></div>
-                            </div>
-                        </div>
-                        <div class="about-content row">
-                            <div class="col-md-3 mb-sm-30">
+                        <div class="about-content row d-flex align-items-center" style="gap: 80px;">
+                            <!-- Logo on the left -->
+                            <div class="col-md-3 text-center">
                                 <div class="de-image-text s2 wow fadeInLeft">
-                                    <div>
-
-                                        
-                                        <img src="bodylogo.png" class="img-fluid img-fluid-2" alt="">
-                                    </div>
+                                    <img src="bodylogo.png" class="img-fluid img-fluid-2" alt="">
                                 </div>
                             </div>
-                            <div class="col-md-9 mb-sm-30">
+                            <div class="col-md-8 position-relative text-white d-flex flex-column align-items-center justify-content-center"
+                                style="background: url('images/dream-art.jpg') no-repeat center center / cover; min-height: 400px; padding: 30px; text-align: center;">
                                 <div class="wow fadeInRight">
-                                    <span><h3 style="color:rgb(241, 187, 9)">Welcome To Unmaad 2025</h3></span>
+                                    <div class="wm wow slideInUp">About</div>
+                                    <h2 class="wow fadeInUp" data-wow-delay=".2s"><span class="id-color">About Us</span>
+                                    </h2>
+                                    <div class="small-border bg-color-2"></div>
+                                    <h3 style="color: rgb(241, 187, 9); margin-top: 15px;">Welcome To Unmaad 2025</h3>
                                     <p>IIM Bangalore's "Unmaad 2025" is one of India's largest business school cultural
                                         festivals, happening offline from Feb 21-23, 2025. It offers a variety of
-                                        competitions such as street dramas, music, dance, quizzes, and debates,
-                                        culminating in a grand fashion show. <br><br> The festival has featured famous
-                                        artists like Mohit Chauhan, Shankar Ehsaan Loy, and Prateek Kuhad, attracting
-                                        attendees nationwide.
+                                        competitions such
+                                        as street dramas, music, dance, quizzes, and debates, culminating in a grand
+                                        fashion show. <br><br>
+                                        The festival has featured famous artists like Mohit Chauhan, Shankar Ehsaan Loy,
+                                        and Prateek Kuhad,
+                                        attracting attendees nationwide.
                                     </p>
                                 </div>
                             </div>
@@ -545,6 +525,25 @@ document.addEventListener("DOMContentLoaded", function() {
                             <div id="carouselExampleIndicators" class="carousel slide carousel-fade wow flipInY"
                                 data-mdb-ride="carousel">
                                 <!-- Slides -->
+                                <script>
+                                    document.addEventListener("DOMContentLoaded", function () {
+                                        var video = document.getElementById("myVideo");
+                                        var carousel = new bootstrap.Carousel(document.getElementById("carouselExampleIndicators"));
+
+                                        video.addEventListener("play", function () {
+                                            carousel.pause(); // Pause the carousel when video plays
+                                        });
+
+                                        video.addEventListener("pause", function () {
+                                            carousel.cycle(); // Resume carousel when video is paused
+                                        });
+
+                                        video.addEventListener("ended", function () {
+                                            carousel.cycle(); // Resume carousel when video ends
+                                        });
+                                    });
+                                </script>
+
                                 <div class="carousel-inner mb-5" style="scrollbar-width: none;">
                                     <div class="carousel-item active">
                                         <video id="myVideo" width="100%" height="100%" controls>
@@ -701,7 +700,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                         data-mdb-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"
                                         style="width: 100px;">
                                         <img loading="lazy" class="d-block w-100 img-fluid"
-                                            src="2023 gALLERY/compressed-images/DSC00001.jpg" alt="" />
+                                            src="images-dj/logo-light.png" alt="" />
                                     </button>
                                     <button type="button" data-mdb-target="#carouselExampleIndicators"
                                         data-mdb-slide-to="1" aria-label="Slide 2" style="width: 100px;">
@@ -988,7 +987,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                 <div class="de-flex-col">
                                     <a href="https://wictronix.com/" target="_blank">
 
-                                        <span class="copy">Powered by  <img loading="lazy" width="auto" height="30px"
+                                        <span class="copy">Powered by <img loading="lazy" width="auto" height="30px"
                                                 src="./images-dj/white.png" /></span>
                                     </a>
                                 </div>
