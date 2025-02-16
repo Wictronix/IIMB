@@ -16363,9 +16363,6 @@ img {
   #desktopvideo {
     display: none;
   }
-  /* #de-carousel, #de-carousel .carousel-inner, #de-carousel .carousel-item, #de-carousel .carousel-item.active {
-        height: fit-content ;
-    } */
   #mobilevideo {
     display: block;
   }
