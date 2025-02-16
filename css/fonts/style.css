@@ -14708,7 +14708,7 @@ img.gif-2 {
 #de-carousel .carousel-inner,
 #de-carousel .carousel-item,
 #de-carousel .carousel-item.active {
-  height: 100vh;
+  height: 150vh;
 }
 
 #de-carousel .carousel-item:nth-child(1) {
