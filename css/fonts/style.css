@@ -17,16 +17,15 @@
   src: url(./fonts/lemonade.otf);
 }
 
-
 @font-face {
-  font-family: 'sukhfont';
-  src: url('./fonts/sukh.ttf') format('truetype');
+  font-family: "sukhfont";
+  src: url("./fonts/sukh.ttf") format("truetype");
   font-weight: bold;
-  font-style:italic;
+  font-style: italic;
 }
 
 .theTitle {
-  font-family: 'sukhfont', sans-serif;
+  font-family: "sukhfont", sans-serif;
   font-size: 8.5rem; /* Ensure this size is applied */
 }
 
@@ -57,7 +56,7 @@
 /*======================================================*/
 
 .theBodyText {
-  font-family: 'sukhfont', sans-serif;
+  font-family: "sukhfont", sans-serif;
   font-size: 3rem; /* Ensure this size is applied */
 }
 @media (max-width: 1200px) {
@@ -8967,7 +8966,7 @@ a.de-card:hover {
 /* ================================================== */
 
 section.about {
-  padding: 90px 0 40px 0;
+  padding: 0px 0 40px 0;
 }
 
 .about .row {
