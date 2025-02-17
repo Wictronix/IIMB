@@ -52,35 +52,6 @@
     font-size: 2rem; /* Adjust size for mobile devices */
   }
 }
-/* for left*/
-.theTitleLeft {
-  font-family: "sukhfont", sans-serif;
-  font-size: 2.5rem; /* Ensure this size is applied */
-}
-
-@media (max-width: 1200px) {
-  .theTitleLeft {
-    font-size: 1.7rem; /* Adjust size for medium screens */
-  }
-}
-
-@media (max-width: 992px) {
-  .theTitleLeft {
-    font-size: 1rem; /* Adjust size for smaller screens */
-  }
-}
-
-@media (max-width: 768px) {
-  .theTitleLeft {
-    font-size: 2.7rem; /* Adjust size for tablets */
-  }
-}
-
-@media (max-width: 576px) {   
-  .theTitleLeft {
-    font-size: 2.7rem; /* Adjust size for mobile devices */
-  }
-}
 
 /*======================================================*/
 
@@ -118,25 +89,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@200;300;400;500;600;700;800&amp;display=swap");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:800");
 /* ================================================== */
-.responsive-img {
-  max-width: 20%;
-}
 
-
-@media (max-width: 768px) {
-  .responsive-img {
-      max-width: 40%;
-  }
-}
-
-@media (max-width: 576px) {
-  .responsive-img {
-      max-width: 60%;
-      /* Adjust size for smaller mobile devices */
-  }
-}
-
-/*===========================================================*/
 * {
   --body-font: "Work Sans", Helvetica, Arial, sans-serif;
   --title-font: "Bebas Neue", Helvetica, Arial, sans-serif;
