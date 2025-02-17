@@ -17,15 +17,16 @@
   src: url(./fonts/lemonade.otf);
 }
 
+
 @font-face {
-  font-family: "sukhfont";
-  src: url("./fonts/sukh.ttf") format("truetype");
+  font-family: 'sukhfont';
+  src: url('./fonts/sukh.ttf') format('truetype');
   font-weight: bold;
-  font-style: italic;
+  font-style:italic;
 }
 
 .theTitle {
-  font-family: "sukhfont", sans-serif;
+  font-family: 'sukhfont', sans-serif;
   font-size: 6.5rem; /* Ensure this size is applied */
 }
 
@@ -274,7 +275,7 @@
 /*======================================================*/
 
 .theBodyText {
-  font-family: "sukhfont", sans-serif;
+  font-family: 'sukhfont', sans-serif;
   font-size: 3rem; /* Ensure this size is applied */
 }
 @media (max-width: 1200px) {
@@ -16575,6 +16576,9 @@ img {
   #desktopvideo {
     display: none;
   }
+  /* #de-carousel, #de-carousel .carousel-inner, #de-carousel .carousel-item, #de-carousel .carousel-item.active {
+        height: fit-content ;
+    } */
   #mobilevideo {
     display: block;
   }
