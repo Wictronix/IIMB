@@ -52,7 +52,36 @@
     font-size: 2rem; /* Adjust size for mobile devices */
   }
 }
+/*left*/
 
+.theTitleLeft {
+  font-family: "sukhfont", sans-serif;
+  font-size: 2.5rem; /* Ensure this size is applied */
+}
+
+@media (max-width: 1200px) {
+  .theTitleLeft {
+    font-size: 5.7rem; /* Adjust size for medium screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .theTitleLeft {
+    font-size: 4rem; /* Adjust size for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .theTitleLeft {
+    font-size: 3.3rem; /* Adjust size for tablets */
+  }
+}
+
+@media (max-width: 576px) {
+  .theTitleLeft {
+    font-size: 2rem; /* Adjust size for mobile devices */
+  }
+}
 /*======================================================*/
 
 .theBodyText {
