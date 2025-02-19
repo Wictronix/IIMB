@@ -111,10 +111,10 @@ body::-webkit-scrollbar-track {
   margin-left: -47.5%;
 }
 .wmmerch {
-  letter-spacing: 50px;
+  letter-spacing: 50px !important;
 }
 .wmacco {
-  letter-spacing: 30px;
+  letter-spacing: 30px !important;
 }
 .de-image-text.s2 h3 {
   color: #000000;
