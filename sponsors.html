@@ -43,6 +43,27 @@
     <!-- color scheme -->
     <link id="colors" href="css/colors/scheme-02.css" rel="stylesheet" type="text/css" />
     <link href="css/coloring.css" rel="stylesheet" type="text/css" />
+    <style>
+        html {
+            background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+        }
+
+        #stars,
+        #stars2,
+        #stars3 {
+            position: absolute;
+        }
+
+        @keyframes animStar {
+            from {
+                transform: translateY(0px);
+            }
+
+            to {
+                transform: translateY(-10000px);
+            }
+        }
+    </style>
 </head>
 
 <body class="dark-scheme">
@@ -114,6 +135,9 @@
         <div class="no-bottom no-top" id="content">
             <div id="top"></div>
             <section class="sponsors-page">
+                <div id='stars'></div>
+                <div id='stars2'></div>
+                <div id='stars3'></div>
                 <div class="container my-5">
                     <div class="row">
                         <div class="col-md-12 text-center">
@@ -155,6 +179,24 @@
 
                                 </div>
                         </div>
+                        <div class="col-sm-12 col-lg-4">
+                            <h2 class="wow fadeInUp text-center" data-wow-delay=".2s"><span class="id-color">IN
+                                    ASSOCIATION WITH</span>
+                                <div class="row">
+                                    <div class="d-flex justify-content-center">
+                                        <div class="col-lg-6 col-md-3 col-12 mb-sm-30 my-4">
+                                            <img loading="lazy" src="images/sponsors/Sumadhura.jpg"
+                                                class="img-fluid sponsor-logo" alt="">
+                                        </div>
+                                    </div>
+
+                                </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
 
                         <div class="col-sm-12 col-lg-4">
                             <h2 class="wow fadeInUp text-center" data-wow-delay=".2s"><span class="id-color">Fueled By
@@ -170,10 +212,6 @@
 
                                 </div>
                         </div>
-
-                    </div>
-
-                    <div class="row">
 
                         <div class="col-sm-12 col-lg-4">
                             <h2 class="wow fadeInUp text-center" data-wow-delay=".2s"><span class="id-color">Alumni
@@ -196,20 +234,6 @@
                                     <div class="d-flex justify-content-center">
                                         <div class="col-lg-6 col-md-3 col-12 mb-sm-30 my-4">
                                             <img loading="lazy" src="images/sponsors/coke.png"
-                                                class="img-fluid sponsor-logo" alt="">
-                                        </div>
-                                    </div>
-
-                                </div>
-                        </div>
-
-                        <div class="col-sm-12 col-lg-4">
-                            <h2 class="wow fadeInUp text-center" data-wow-delay=".2s"><span class="id-color">Snacking
-                                    Partner</span>
-                                <div class="row">
-                                    <div class="d-flex justify-content-center">
-                                        <div class="col-lg-6 col-md-3 col-12 mb-sm-30 my-4">
-                                            <img loading="lazy" src="images/sponsors/ITC.png"
                                                 class="img-fluid sponsor-logo" alt="">
                                         </div>
                                     </div>
@@ -378,7 +402,7 @@
                                 <div class="row">
                                     <div class="d-flex justify-content-center">
                                         <div class="col-lg-6 col-md-3 col-12 mb-sm-30 my-4">
-                                            <img loading="lazy" src="images/sponsors/snap.png"
+                                            <img loading="lazy" src="images/sponsors/Travelzila.jpeg"
                                                 class="img-fluid sponsor-logo" alt="">
                                         </div>
                                     </div>
@@ -386,6 +410,19 @@
                                 </div>
                         </div>
 
+                        <div class="col-sm-12 col-lg-4">
+                            <h2 class="wow fadeInUp text-center" data-wow-delay=".2s"><span class="id-color">Snacking
+                                    Partner</span>
+                                <div class="row">
+                                    <div class="d-flex justify-content-center">
+                                        <div class="col-lg-6 col-md-3 col-12 mb-sm-30 my-4">
+                                            <img loading="lazy" src="images/sponsors/ITC.png"
+                                                class="img-fluid sponsor-logo" alt="">
+                                        </div>
+                                    </div>
+
+                                </div>
+                        </div>
                     </div>
 
                 </div>
@@ -498,6 +535,40 @@
             });
         });
 
+    </script>
+    <script>
+        function generateRandomBoxShadow(n) {
+            let boxShadow = '';
+            for (let i = 0; i < n; i++) {
+                boxShadow += `${getRandomInt(2000)}px ${getRandomInt(2000)}px #FFF`;
+                if (i < n - 1) boxShadow += ', ';
+            }
+            return boxShadow;
+        }
+
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+        }
+
+        const stars = document.querySelectorAll('#stars, #stars2, #stars3');
+        stars.forEach(star => {
+            const size = parseInt(star.id.replace('stars', ''));
+            star.style.width = size + 'px';
+            star.style.height = size + 'px';
+            star.style.background = 'transparent';
+            star.style.boxShadow = generateRandomBoxShadow(size === 1 ? 700 : (size === 2 ? 200 : 100));
+            star.style.animation = `animStar ${(size === 1 ? 50 : (size === 2 ? 100 : 150))}s linear infinite`;
+
+            const after = document.createElement('div');
+            after.style.content = ' ';
+            after.style.position = 'absolute';
+            after.style.top = '2000px';
+            after.style.width = size + 'px';
+            after.style.height = size + 'px';
+            after.style.background = 'transparent';
+            after.style.boxShadow = star.style.boxShadow;
+            star.appendChild(after);
+        });
     </script>
 </body>
 
